@@ -1,0 +1,79 @@
+div.body_container {
+	position:         absolute;
+	top:              0px;
+	bottom:           0px;
+	left:             0px;
+	right:            0px;
+	background-color: white;
+	overflow:         hidden;
+}
+
+div.image_grid_container { 
+	position: absolute;
+	top:      20px;
+	bottom:   20px;
+	left:     20px;
+	right:    20px;
+	background: radial-gradient( #FFFFFF, #c7c7c7, #656565 );
+	padding: 20px;
+}
+
+div.image_container { 
+	position: relative;
+	width:  33.33%;
+	display: inline-block;
+	cursor:  pointer;
+}
+
+/* TODO: replace the image with the real image with text here! */
+div.image_container:hover {
+	-webkit-filter: brightness(0.6);
+	filter: brightness(0.6);
+}
+
+/* Add the data label of the image in when they hover over */
+div.image_container:hover::before {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	content: attr( data-label );
+	font-size: 40px;
+	color: red;
+	font-family: arial;
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
+	/* Trick the browser into putting every word onto a new line */
+	word-spacing: 9999999px;
+	z-index: 1;
+}
+
+/* Add the play button in when they hover over */
+div.image_container:hover::after {
+	position: absolute;
+	top: calc( 50% - 30px );
+	left: calc( 50% - 30px );
+	content: "";
+	width: 0px;
+	height: 0px;
+	border-left: 50px solid red;
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent;
+	z-index: 1;
+}
+
+div.image_container.left { 
+	float: left;
+}
+
+div.image_container.middle { 
+	clear: both;
+}
+
+div.image_container.right { 
+	float: right;
+}
+
+img.image {
+	width: 100%;
+	z-index: 2;
+}
