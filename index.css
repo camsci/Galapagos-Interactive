@@ -9,20 +9,21 @@ div.body_container {
 }
 
 div.image_grid_container { 
-	position: absolute;
-	top:      20px;
-	bottom:   20px;
-	left:     20px;
-	right:    20px;
+	position:   absolute;
+	top:        20px;
+	bottom:     20px;
+	left:       20px;
+	right:      20px;
 	background: radial-gradient( #FFFFFF, #c7c7c7, #656565 );
-	padding: 20px;
+	padding:    20px;
 }
 
 div.image_container { 
 	position: relative;
-	width:  33.33%;
-	display: inline-block;
-	cursor:  pointer;
+	width:    calc( 100% / 3 );
+	display:  inline-block;
+	cursor:   pointer;
+	overflow: hidden;
 }
 
 /* TODO: replace the image with the real image with text here! */
@@ -44,7 +45,6 @@ div.image_container:hover::before {
 	filter: grayscale(0%);
 	/* Trick the browser into putting every word onto a new line */
 	word-spacing: 9999999px;
-	z-index: 1;
 }
 
 /* Add the play button in when they hover over */
@@ -58,7 +58,6 @@ div.image_container:hover::after {
 	border-left: 50px solid red;
 	border-top: 30px solid transparent;
 	border-bottom: 30px solid transparent;
-	z-index: 1;
 }
 
 div.image_container.left { 
@@ -75,5 +74,42 @@ div.image_container.right {
 
 img.image {
 	width: 100%;
-	z-index: 2;
+}
+
+div.modal_title {
+	font-weight: bold;
+	font-size:   40px;
+	color:       red;
+	font-family: arial;
+}
+
+div.modal_sub_title {
+	font-size:   30px;
+	color:       red;
+	font-family: arial;
+	font-style:  italic;
+}
+
+span.modal_content_title {
+	padding-right: 10px;
+	color:         red;
+}
+
+div.modal_content {
+	font-family:  arial;
+	font-size:    30px;
+	color:        gray;
+	margin-top:   20px;
+}
+
+div.modal_image_container {
+	height:      300px;
+	float:       right;
+	margin-left: 20px;
+	position:    relative;
+	top:         -45px;
+}
+
+img.modal_image {
+	height: 300px;	
 }

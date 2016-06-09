@@ -1,0 +1,26 @@
+div.modal_dialogue { 
+	position: absolute;
+	top:      40px;
+	bottom:   40px;
+	left:     40px;
+	right:    40px;
+	background-color: white;
+	padding:          20px;
+}
+
+/* Style the close button */
+div.close_button { 
+	width:         40px;
+	height:        40px;
+	background:    red;
+    border-radius: 20px;
+	position:      absolute;
+	top:           25px;
+	right:         25px;
+	z-index:       2;
+	color:         white;
+	font-family:   arial;
+	font-size:     34px;
+	text-align:    center;
+	cursor:        pointer;
+}
