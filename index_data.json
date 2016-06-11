@@ -5,21 +5,37 @@ var index_data = {
 	
 	// the cactus object
 	prickly_cactus : {
-		nice_name  : "Prickly Cactus",
-		latin_name : "Opuntia echios",
-		habitat    : "The prickly pear cactus is suited to the dry lowlands of the Galapagos Islands as they <b>store water<\/b> in their thick, fleshy stems. Their <b>prickly needles<\/b> protect them against some predators and help to reduce water loss due to their low surface area.",
-		food       : "Like all plants, the prickly pear cactus gains all the energy it needs from the sun. The sun's energy helps plants to turn carbon dioxide and water into oxygen and sugar, a process called <b>photosynthesis<\/b>. All plants are known as producers.",
-		predators  : "Despite their sharp spikes, the pricky pear cactus is eaten by a wide range of animals. these include giant tortoises, <b>land iguanas<\/b> and some insects.",
-		image_path : "images/large_prickly_cactus.png"
+		nice_name        : "Prickly Cactus",
+		latin_name       : "Opuntia echios",
+		habitat          : "The prickly pear cactus is suited to the dry lowlands of the Galapagos Islands as they <b>store water<\/b> in their thick, fleshy stems. Their <b>prickly needles<\/b> protect them against some predators and help to reduce water loss due to their low surface area.",
+		food             : "Like all plants, the prickly pear cactus gains all the energy it needs from the sun. The sun's energy helps plants to turn carbon dioxide and water into oxygen and sugar, a process called <b>photosynthesis<\/b>. All plants are known as producers.",
+		predators        : "Despite their sharp spikes, the pricky pear cactus is eaten by a wide range of animals. these include giant tortoises, <b>land iguanas<\/b> and some insects.",
+		image_path       : "images/large_prickly_cactus.png",
+		type_image_path  : "images/producer.png",
+		type_description : "PRODUCER"
 	},
 	
 	// the flying_fish object
 	flying_fish : {
-		nice_name  : "Flying Fish",
-		latin_name : "Exocoetus volitans",
-		habitat    : "Found in tropical and warm subtropical waters, flying fish spend the majority of their time close to the surface of the water. When under thread from predators, flying fish will propel themselves out of the water and glide for up to 100m.",
-		food       : "Flying fish feed on a variety of small organisms including krill and <b>plankton<\/b>",
-		predators  : "Flying fish are predated upon by seabirds such as the <b>blue-footed booby<\/b>.",
-		image_path : "images/large_flying_fish.png"
+		nice_name        : "Flying Fish",
+		latin_name       : "Exocoetus volitans",
+		habitat          : "Found in tropical and warm subtropical waters, flying fish spend the majority of their time close to the surface of the water. When under thread from predators, flying fish will propel themselves out of the water and glide for up to 100m.",
+		food             : "Flying fish feed on a variety of small organisms including krill and <b>plankton<\/b>",
+		predators        : "Flying fish are predated upon by seabirds such as the <b>blue-footed booby<\/b>.",
+		image_path       : "images/large_flying_fish.png",
+		type_image_path  : "images/primary_consumer.png",
+		type_description : "PRIMARY CONSUMER"
+	},
+	
+	// the vampire finch object
+	vampire_finch : {
+		nice_name        : "Vampire Finch",
+		latin_name       : "Geospiza difficilis septentrionalis",
+		habitat          : "A type of sharp-beaked ground finch, the vampire finch is found on the northern most islands of Wolf and Darwin where it is very dry.",
+		food             : "The vampire finch has evolved an unusal diet, drinking the <b>blood of sea birds<\/b> such as the <b>blue-footed booby<\/b>.",
+		predators        : "The main predator of all Galapagos finches is the <b>Galapagos hawk<\/b> but they may also be hunted by owls and <b>snakes<\/b>.",
+		image_path       : "images/large_vampire_finch.png",
+		type_image_path  : "images/secondary_consumer.png",
+		type_description : "SECONDARY CONSUMER"
 	}
 };

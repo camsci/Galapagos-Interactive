@@ -6,36 +6,53 @@ var modal_dialogue = function() {
 	// remove our modal dialogue
 	// ----------
 	var remove = function() {
+		
 		// remove the element from screen
 		document.getElementById( "modal_dialogue" ).remove();
-		document.getElementById( "close_button"   ).remove();
+
+		// remove the element from screen
+		document.getElementById( "modal_div" ).remove();
+		
+		// get a pointer to the close button
+		document.getElementById( "close_button" ).remove();
 	}
 	
 	// ----------
 	// display our modal dialogue
 	//     @dialogue_content: What to put inside the HTML of the dialogue!
+	//     @size:             medium or large are our current options 
 	// ----------
-	var display = function( dialogue_content ) {
+	var display = function( dialogue_content, size ) {
 		
 		// create the element
-		var dialogue = document.createElement( "div" );
-		dialogue.id  = "modal_dialogue";
+		var modal_dialogue = document.createElement( "div" );
+		modal_dialogue.id  = "modal_dialogue";
 		
 		// give it the right class name
-		dialogue.className = "modal_dialogue";
+		modal_dialogue.className = "modal_dialogue " + size;
 		
 		// add in the content
-		dialogue.innerHTML = dialogue_content;
+		modal_dialogue.innerHTML = dialogue_content;
 		
 		// add the element into the body
-		document.body.appendChild( dialogue );
+		document.body.appendChild( modal_dialogue );
 		
-		// TODO: Add in a close button
+		// create a div to sit behind the modal_dialogue
+		var modal_div = document.createElement( "div" );
+		modal_div.id  = "modal_div";
+		
+		// set the right class name
+		modal_div.className = "modal_div";
+
+		// add the element into the body
+		document.body.appendChild( modal_div );
+				
+		// Add in a close button
 		var close_button = document.createElement( "div" );
 		close_button.id  = "close_button";
 		
 		// give it the right class name
-		close_button.className = "close_button";
+		close_button.className = "close_button " + size;
 		
 		// add in a big X!
 		close_button.innerHTML = "X";

@@ -1,26 +1,57 @@
+div.modal_div {
+	position:         absolute; 
+	top:              0px;
+	bottom:           0px;
+	left:             0px;
+	right:            0px;
+	background-color: black;
+	opacity:          0.4;
+	z-index:          2;
+}
+
 div.modal_dialogue { 
-	position: absolute;
-	top:      40px;
-	bottom:   40px;
-	left:     40px;
-	right:    40px;
+	position:         absolute;
 	background-color: white;
 	padding:          20px;
+	overflow:         auto;
+	z-index:          3;
+}
+
+div.modal_dialogue.large {
+	top:    40px;
+	bottom: 40px;
+	left:   40px;
+	right:  40px;
+}
+
+div.modal_dialogue.medium {
+	top:    140px;
+	bottom: 140px;
+	left:   140px;
+	right:  140px;
 }
 
 /* Style the close button */
 div.close_button { 
 	width:         40px;
 	height:        40px;
-	background:    red;
+	background:    #d22f2f;
     border-radius: 20px;
 	position:      absolute;
-	top:           25px;
-	right:         25px;
-	z-index:       2;
+	z-index:       4;
 	color:         white;
 	font-family:   arial;
 	font-size:     34px;
 	text-align:    center;
 	cursor:        pointer;
+}
+
+div.close_button.large {
+	top:   25px;
+	right: 25px;
+}
+
+div.close_button.medium {
+	top:   125px;
+	right: 125px;
 }
