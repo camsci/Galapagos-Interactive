@@ -8,9 +8,7 @@
 
 <link rel="stylesheet" type="text/css" href="index.css">
 <script type="text/javascript" src="index.js"></script>
-<script type="text/javascript" src="index_data.json"></script>
 <script type="text/javascript" src="add_event_listeners.js"></script>
-
 <script type="text/javascript" src="modal_dialogue.js"></script>
 <link rel="stylesheet" type="text/css" href="modal_dialogue.css">
 
@@ -18,38 +16,15 @@
 
 <body>
 
-<div class="body_container">
-	<div class="image_grid_container">
-		
-		<div class="image_container left" data-label="Prickly Cactus" data-json-id="prickly_cactus">
-			<img src="images/prickly_cactus.png" class="image">
-		</div>
-		<div class="image_container middle" data-label="Flying Fish" data-json-id="flying_fish">
-			<img src="images/flying_fish.png" class="image">
-		</div>
-		<div class="image_container right" data-label="Vampire Finch" data-json-id="vampire_finch">
-			<img src="images/vampire_finch.png" class="image">
-		</div>
+<div class="iframe_content">
+	<iframe src="species_profiles.html" class="content" scrolling="no"></iframe>
+</div>
 
-		<div class="image_container left" data-label="Land Iquana" data-json-id="land_iquana">
-			<img src="images/land_iquana.png" class="image">
-		</div>
-		<div class="image_container middle" data-label="Galapagos Banded Snake" data-json-id="banded_snake">
-			<img src="images/banded_snake.png" class="image">
-		</div>
-		<div class="image_container right" data-label="Galapagos Hawk" data-json-id="hawk">
-			<img src="images/hawk.png" class="image">
-		</div>
-		
-	</div>
+<div class="footbar_navigation">
+	<span class="footbar_text">Food chains and webs</span>
 </div>
 
 <script type="text/javascript">
-
-// ----------
-// Attach event listeners to our images
-// ----------
-add_event_listeners.to_class_name( "image_container", "click", index.grid_image_clicked );
 
 // ----------
 // Attach an event handler for when we have finished loading

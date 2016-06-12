@@ -12,7 +12,7 @@ var add_event_listeners = function() {
 		
 		// grab all of the elements that match this class name
 		var all_elements = document.getElementsByClassName( class_name_string );
-		
+
 		// go through all of the elements
 		for ( var i = 0; i < all_elements.length; i = i + 1 ) { 
 			

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<title>Food Chain</title>
+
+<link rel="stylesheet" type="text/css" href="species_profiles.css">
+<script type="text/javascript" src="species_profiles.js"></script>
+<script type="text/javascript" src="species_profiles_data.json"></script>
+<script type="text/javascript" src="add_event_listeners.js"></script>
+
+<script type="text/javascript" src="modal_dialogue.js"></script>
+<link rel="stylesheet" type="text/css" href="modal_dialogue.css">
+
+</head>
+
+<body>
+
+<div class="image_grid_container">
+	
+	<div class="image_container">
+		<img src="images/prickly_cactus.png" class="image" data-label="Prickly Cactus" data-json-id="prickly_cactus">
+	</div>
+	<div class="image_container">
+		<img src="images/flying_fish.png" class="image" data-label="Flying Fish" data-json-id="flying_fish">
+	</div>
+	<div class="image_container">
+		<img src="images/vampire_finch.png" class="image" data-label="Vampire Finch" data-json-id="vampire_finch">
+	</div>
+
+	<div class="image_container">
+		<img src="images/land_iquana.png" class="image" data-label="Land Iquana" data-json-id="land_iguana">
+	</div>
+	<div class="image_container">
+		<img src="images/banded_snake.png" class="image" data-label="Galapagos Banded Snake" data-json-id="banded_snake">
+	</div>
+	<div class="image_container">
+		<img src="images/hawk.png" class="image" data-label="Galapagos Hawk" data-json-id="hawk">
+	</div>
+
+	<div class="image_container">
+		<img src="images/green_sea_lettuce.png" class="image" data-label="Green Sea Lettuce" data-json-id="green_sea_lettuce">
+	</div>
+	<div class="image_container">
+		<img src="images/razor_surgeonfish.png" class="image" data-label="Razor Surgeonfish" data-json-id="razor_surgeonfish">
+	</div>
+	<div class="image_container">
+		<img src="images/bacalao_grouper.png" class="image" data-label="Bacalao Grouper" data-json-id="bacalao_grouper">
+	</div>
+
+	<div class="image_container">
+		<img src="images/shark.png" class="image" data-label="Galapagos Shark" data-json-id="shark">
+	</div>
+	<div class="image_container">
+		<img src="images/blue_footed_booby.png" class="image" data-label="Blue-footed Booby" data-json-id="blue_footed_booby">
+	</div>
+	<div class="image_container">
+		<img src="images/plankton.png" class="image" data-label="Plankton" data-json-id="plankton">
+	</div>
+
+	<div class="image_container">
+		<img src="images/marine_iguana.png" class="image" data-label="Marine Iquana" data-json-id="marine_iguana">
+	</div>
+	<div class="image_container" style="cusor: default;">
+	</div>
+	<div class="image_container" style="cusor: default;">
+	</div>
+	
+</div>
+
+<script type="text/javascript">
+
+// ----------
+// Attach event listeners to our images
+// ----------
+add_event_listeners.to_class_name( "image_container", "click", species_profiles.grid_image_clicked );
+
+</script>
+
+</body>
+
+</html>
