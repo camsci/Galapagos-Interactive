@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<title>Habitat Choice</title>
+
+<link rel="stylesheet" type="text/css" href="food_chain.css">
+<script type="text/javascript" src="add_event_listeners.js"></script>
+
+</head>
+
+<body>
+
+<div class="coloured_container">
+
+    <div class="modal_title">Now choose a habitat to find out who eats who...</div>
+
+    <div><img class="habitat_choice" src="images/habitat_choice/land.png" data-habitat-id="land"><div>
+    <div><img class="habitat_choice" src="images/habitat_choice/sea.png" data-habitat-id="sea"><div>
+
+</div>
+
+<script type="text/javascript">
+
+// ----------
+// Attach event listeners to our images
+// ----------
+add_event_listeners.to_class_name( "habitat_choice", "click", top.game_logic.habitat_chosen );
+
+</script>
+
+</body>
+
+</html>

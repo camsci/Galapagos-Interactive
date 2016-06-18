@@ -6,8 +6,10 @@
 
 <title>Food Chain</title>
 
-<link rel="stylesheet" type="text/css" href="index.css">
+<link rel="stylesheet" type="text/css" href="food_chain.css">
 <script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="basic_food_chain_data.js"></script>
+<script type="text/javascript" src="game_logic.js"></script>
 <script type="text/javascript" src="add_event_listeners.js"></script>
 <script type="text/javascript" src="modal_dialogue.js"></script>
 <link rel="stylesheet" type="text/css" href="modal_dialogue.css">
@@ -17,11 +19,12 @@
 <body>
 
 <div class="iframe_content">
-	<iframe src="species_profiles.html" class="content" scrolling="no"></iframe>
+    <iframe src="species_profiles.html" id="game_content" class="content" scrolling="no"></iframe>
 </div>
 
 <div class="footbar_navigation">
-	<span class="footbar_text">Food chains and webs</span>
+    <span class="footbar_text">Food chains and Webs</span>
+    <span class="button right" id="reset_button">Reset</span>
 </div>
 
 <script type="text/javascript">
@@ -31,6 +34,12 @@
 // this will display an intro message
 // ----------
 add_event_listeners.to_element( window, "load", index.display_intro_message );
+
+// ----------
+// Attach an event handler for when we have finished loading
+// this will attach event listeners to the elements in the page
+// ----------
+add_event_listeners.to_element( window, "load", index.attach_click_events );
 
 </script>
 
