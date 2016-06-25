@@ -69,7 +69,7 @@ div.modal_continue_triangle {
 }
 
 span.button {
-    width:          95px;
+    width:          114px;
     display:        inline-block;
     color:          #FFFFFF;
     font-size:      17px;
@@ -220,6 +220,20 @@ div.food_chain_image_container {
     background-color: #FFFFFF;
 }
 
+/* We use a smaller version of the image container on the name food chain levels page */
+div.food_chain_image_container.medium {
+    height: 130px;
+    width:  193px;
+}
+
+/* We use an even smaller version of the image container on the name food chain levels page */
+div.food_chain_image_container.small {
+    height:   100px;
+    width:    173px;
+    position: absolute;
+    margin:   0px;
+}
+
 /* We want to be able to disable a food chain image container easily */
 div.food_chain_image_container.disabled {
     background-color: #656565;
@@ -238,6 +252,54 @@ div.food_chain_arrow {
     top:           -85px;
 }
 
+/* When we are using medium containers, we need a different top position */
+div.food_chain_arrow.medium {
+    top: -48px;
+}
+
 div.answer_choice_container {
     margin-top: 20px;
+}
+
+div.draggable_answer {
+    height:           130px;
+    width:            193px;
+    background-color: purple;
+    color:            white;
+    font-family:      arial;
+    float:            left;
+    font-size:        30px;
+    text-align:       center;
+    word-spacing:     193px;
+    position:         absolute;
+}
+
+div.draggable_answer_container {
+    position: relative;
+    height:   150px;
+}
+
+div.full_food_chain_container {
+    position: absolute;
+    top:      0px;
+    bottom:   0px;
+    right:    0px;
+    left:     50%;
+    border:   1px solid green;
+}
+
+div.apex_predator { 
+    background-color: red;
+}
+
+div.apex_predator.land {
+    position: absolute;
+    top:      10px;
+    right:    100px; 
+}
+
+div.apex_predator.sea {
+    position: absolute;
+    bottom:   10px;
+    right:    100px; 
 }

@@ -6,11 +6,14 @@ var game_logic = ( function create_api() {
     var food_chains_completed = {
         sea  : false,
         land : false
-    }
+    };
     
     // store which food chain they are currently working on 
     var current_food_chain;
-        
+
+    // store the current question index
+    var current_question_index = 0;
+    
     // ----------
     // Go to habitat choice
     //     @click_event is the browser click event 
@@ -23,10 +26,21 @@ var game_logic = ( function create_api() {
         // stop the event bubbling up
         click_event.stopPropagation();
         
-        // change to the habitat choice
-        document.getElementById( "game_content" ).src = "habitat_choice.html";
+        // ensure the right iframe is displayed
+        document.getElementById( "game_content"     ).style.display = "";
+        document.getElementById( "species_profiles" ).style.display = "none";
     }
 
+    // ----------
+    // Display the species profile
+    //     @click_event is the browser click event 
+    // ----------
+    function show_species_profile( click_event ) {
+        // ensure the right iframe is displayed
+        document.getElementById( "game_content"     ).style.display = "none";
+        document.getElementById( "species_profiles" ).style.display = "";
+    }
+    
     // ----------
     // reset the game immediately
     //     @click_event is the browser click event 
@@ -42,6 +56,9 @@ var game_logic = ( function create_api() {
     //     @habitat_choice is either "land" or "sea"
     // ----------
     function play_new_habitat_game( habitat_choice ) {
+        
+        // reset the question index
+        current_question_index = 0;
         
         // set the right food chain page.
         document.getElementById( "game_content" ).src = "basic_food_chain.html";
@@ -79,9 +96,8 @@ var game_logic = ( function create_api() {
     
     // ----------
     // get the images for the current question
-    //     @current_question_index - the index of the current question
     // ----------
-    function get_current_question_images( current_question_index ) {
+    function get_current_question_images() {
         
         // return the images for this question
         return basic_food_chain_data[ current_food_chain ][ current_question_index ].images;
@@ -89,9 +105,8 @@ var game_logic = ( function create_api() {
 
     // ----------
     // get the animals for the current question
-    //     @current_question_index - the index of the current question
     // ----------
-    function get_current_question_animals( current_question_index ) {
+    function get_current_question_animals() {
         
         // return the images for this question
         return basic_food_chain_data[ current_food_chain ][ current_question_index ].animals;
@@ -99,9 +114,8 @@ var game_logic = ( function create_api() {
 
     // ----------
     // get the text for the current question
-    //     @current_question_index - the index of the current question
     // ----------
-    function get_current_question_text( current_question_index ) {
+    function get_current_question_text() {
         
         // return the images for this question
         return basic_food_chain_data[ current_food_chain ][ current_question_index ].question;
@@ -109,10 +123,9 @@ var game_logic = ( function create_api() {
 
     // ----------
     // validate an answer to the basic food chain quiz
-    //     @current_question_index - the index of the current question
-    //     @answer                 - the answer provided by the user
+    //     @answer - the answer provided by the user
     // ----------
-    function validate_answer( current_question_index, answer ) {
+    function validate_answer( answer ) {
         
         // if this is the right answer
         if ( basic_food_chain_data[ current_food_chain ][ current_question_index ].answer == answer ) {
@@ -142,6 +155,14 @@ var game_logic = ( function create_api() {
         // play a new habitat game
         play_new_habitat_game( next_habitat );
     }
+
+    // ----------
+    // start the next type of game!
+    // ----------
+    function start_name_food_chain_levels() {
+        // set the right food chain page.
+        document.getElementById( "game_content" ).src = "name_food_chain_levels.html";
+    }
     
     // ----------
     // we've finished a basic food chain
@@ -164,7 +185,7 @@ var game_logic = ( function create_api() {
             dialogue_markup.push( "<div class=\"modal_content\">We will do chains for both land and sea, then we will look at how they are connected.<\/div>" );
             
             // add in the continue button
-            dialogue_markup.push( "<div class=\"modal_continue_button\" id=\"modal_continue_button\"><div class=\"modal_continue_triangle\"></div></div>")
+            dialogue_markup.push( "<div class=\"modal_continue_button\" id=\"modal_continue_button\"><div class=\"modal_continue_triangle\"></div></div>");
             
             // show the modal display, and say that we want it to be medium in size
             modal_dialogue.display( dialogue_markup.join( "" ), "medium", false );
@@ -175,22 +196,79 @@ var game_logic = ( function create_api() {
             // stop here
             return;
         }
+
+        // start off the next game
+        start_name_food_chain_levels();
+    }
         
-        // TODO: Move onto the next game
-        alert( "Done" );
+    // ----------
+    // returns the question index
+    // ----------
+    function get_current_question_index() {
+        // return the index
+        return current_question_index;
+    }
+    
+    // ----------
+    // updates the question index
+    // ----------
+    function set_current_question_index( new_index ) {
+        // update the index
+        current_question_index = new_index;
+    }
+
+    // ----------
+    // play the entire food chain part of the game
+    //     @click_event - passed in by the browser.
+    // ----------
+    function play_entire_food_chain( click_event ) {
+
+        // remove the dialogue 
+        modal_dialogue.remove(); 
+        
+        // set the right food chain page.
+        document.getElementById( "game_content" ).src = "full_food_chain.html";
+    }
+    
+    // ----------
+    // they have finished the name food chain levels part of the game
+    // ----------
+    function finished_name_food_chain_levels() {
+        
+        // declare an array to hold our markup
+        var dialogue_markup = [];
+        
+        // add in our intro title
+        dialogue_markup.push( "<div class=\"modal_title\">", "That's correct!", "<\/div>" );
+        
+        // add in an explanation
+        dialogue_markup.push( "<div class=\"modal_content\">Now let's put it all together....<\/div>" );
+        
+        // add in the continue button
+        dialogue_markup.push( "<div class=\"modal_continue_button\" id=\"modal_continue_button\"><div class=\"modal_continue_triangle\"></div></div>");
+        
+        // show the modal display, and say that we want it to be medium in size
+        modal_dialogue.display( dialogue_markup.join( "" ), "medium", false );
+
+        // add a listener to the continue button, to close the dialogue
+        add_event_listeners.to_element( document.getElementById( "modal_continue_button" ), "click", play_entire_food_chain );
     }
     
     // return our public API
     return {
-        go_to_habitat_choice         : go_to_habitat_choice,
-        reset_game_immediately       : reset_game_immediately,
-        habitat_chosen               : habitat_chosen,
-        get_current_food_chain       : get_current_food_chain,
-        get_current_question_images  : get_current_question_images,
-        get_current_question_animals : get_current_question_animals,
-        get_current_question_text    : get_current_question_text,
-        validate_answer              : validate_answer,
-        finished_basic_food_chain    : finished_basic_food_chain
+        go_to_habitat_choice            : go_to_habitat_choice,
+        reset_game_immediately          : reset_game_immediately,
+        habitat_chosen                  : habitat_chosen,
+        get_current_food_chain          : get_current_food_chain,
+        get_current_question_images     : get_current_question_images,
+        get_current_question_animals    : get_current_question_animals,
+        get_current_question_text       : get_current_question_text,
+        validate_answer                 : validate_answer,
+        finished_basic_food_chain       : finished_basic_food_chain,
+        set_current_question_index      : set_current_question_index,
+        get_current_question_index      : get_current_question_index,
+        show_species_profile            : show_species_profile,
+        finished_name_food_chain_levels : finished_name_food_chain_levels
     };
     
 })();

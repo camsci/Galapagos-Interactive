@@ -36,6 +36,9 @@ var index = (function create_api() {
     function attach_click_events( body_onload_event ) {
         // attach the reset button click handler
         add_event_listeners.to_element( document.getElementById( "reset_button" ), "click", game_logic.reset_game_immediately  );
+        
+        // attach the reset button click handler
+        add_event_listeners.to_element( document.getElementById( "species_profile_button" ), "click", game_logic.show_species_profile  );
     }
     
     // return our public API

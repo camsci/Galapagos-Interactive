@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<title>Food Chain</title>
+
+<link rel="stylesheet" type="text/css" href="food_chain.css">
+<script type="text/javascript" src="add_event_listeners.js"></script>
+<script type="text/javascript" src="full_food_chain.js"></script>
+
+<script type="text/javascript" src="modal_dialogue.js"></script>
+<link rel="stylesheet" type="text/css" href="modal_dialogue.css">
+
+</head>
+
+<body>
+
+<div class="coloured_container">
+    
+    <div class="full_food_chain_container">
+    
+        <!-- first lay out our empty droppable elements -->
+        <div class="food_chain_image_container small apex_predator land">Apex Predator</div>
+        <div class="food_chain_image_container small apex_predator sea ">Apex Predator</div>
+
+        <div class="food_chain_image_container small secondary_consumer land">Secondary Consumer</div>
+        <div class="food_chain_image_container small secondary_consumer sea ">Secondary Consumer</div>
+
+        <div class="food_chain_image_container small primary_consumer land">Primary Consumer</div>
+        <div class="food_chain_image_container small primary_consumer sea ">Primary Consumer</div>
+
+        <div class="food_chain_image_container small producer land">Producer</div>
+        <div class="food_chain_image_container small producer sea ">Producer</div>
+        
+        <!-- then lay out the ones that are already answered -->
+        <div class="food_chain_image_container small primary_consumer land iquana"><img src="images/full_food_chain/land_iquana.png" class="image"></div>
+        <div class="food_chain_image_container small primary_consumer sea  razor_surgeonfish"><img src="images/full_food_chain/razor_surgeonfish.png" class="image"></div>
+        <div class="food_chain_image_container small producer sea  plankton"><img src="images/full_food_chain/plankton.png" class="image"></div>
+        <div class="food_chain_image_container small secondary_consumer land  blue_footed_booby"><img src="images/full_food_chain/blue_footed_booby.png" class="image"></div>
+        
+    </div>
+    
+</div>
+
+<script type="text/javascript">
+
+// ----------
+// Attach an event handler for when we have finished loading
+// this will actually start the game
+// ----------
+add_event_listeners.to_element( window, "load", full_food_chain.start_game );
+
+</script>
+
+</body>
+
+</html>
