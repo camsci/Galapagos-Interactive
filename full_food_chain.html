@@ -18,30 +18,64 @@
 <body>
 
 <div class="coloured_container">
+    <div class="full_food_chain">
     
-    <div class="full_food_chain_container">
-    
-        <!-- first lay out our empty droppable elements -->
-        <div class="food_chain_image_container small apex_predator land">Apex Predator</div>
-        <div class="food_chain_image_container small apex_predator sea ">Apex Predator</div>
-
-        <div class="food_chain_image_container small secondary_consumer land">Secondary Consumer</div>
-        <div class="food_chain_image_container small secondary_consumer sea ">Secondary Consumer</div>
-
-        <div class="food_chain_image_container small primary_consumer land">Primary Consumer</div>
-        <div class="food_chain_image_container small primary_consumer sea ">Primary Consumer</div>
-
-        <div class="food_chain_image_container small producer land">Producer</div>
-        <div class="food_chain_image_container small producer sea ">Producer</div>
+        <div class="full_food_chain_draggable_container">
+            <div class="food_chain_image_container small shark"><img id="shark" data-animal-name="shark" src="images/full_food_chain/shark.png" class="image draggable_image_answer"></div>
+            <div class="food_chain_image_container small banded_snake"><img id="banded_snake" data-animal-name="banded_snake" src="images/full_food_chain/banded_snake.png" class="image draggable_image_answer"></div>
+            <div class="food_chain_image_container small flying_fish"><img id="flying_fish" data-animal-name="flying_fish" src="images/full_food_chain/flying_fish.png" class="image draggable_image_answer"></div>
+            <div class="food_chain_image_container small bacalao_grouper"><img id="bacalao_grouper" data-animal-name="bacalao_grouper" src="images/full_food_chain/bacalao_grouper.png" class="image draggable_image_answer"></div>
+            <div class="food_chain_image_container small hawk"><img id="hawk" data-animal-name="hawk" src="images/full_food_chain/hawk.png" class="image draggable_image_answer"></div>
+            <div class="food_chain_image_container small prickly_cactus"><img id="prickly_cactus" data-animal-name="prickly_cactus" src="images/full_food_chain/prickly_cactus.png" class="image draggable_image_answer"></div>
+            <div class="food_chain_image_container small vampire_finch"><img id="vampire_finch" data-animal-name="vampire_finch" src="images/full_food_chain/vampire_finch.png" class="image draggable_image_answer"></div>
+            <div class="food_chain_image_container small marine_iguana"><img id="marine_iguana" data-animal-name="marine_iguana" src="images/full_food_chain/marine_iguana.png" class="image draggable_image_answer"></div>
+            <div class="food_chain_image_container small green_sea_lettuce"><img id="green_sea_lettuce" data-animal-name="green_sea_lettuce" src="images/full_food_chain/green_sea_lettuce.png" class="image draggable_image_answer"></div>
+        </div>
         
-        <!-- then lay out the ones that are already answered -->
-        <div class="food_chain_image_container small primary_consumer land iquana"><img src="images/full_food_chain/land_iquana.png" class="image"></div>
-        <div class="food_chain_image_container small primary_consumer sea  razor_surgeonfish"><img src="images/full_food_chain/razor_surgeonfish.png" class="image"></div>
-        <div class="food_chain_image_container small producer sea  plankton"><img src="images/full_food_chain/plankton.png" class="image"></div>
-        <div class="food_chain_image_container small secondary_consumer land  blue_footed_booby"><img src="images/full_food_chain/blue_footed_booby.png" class="image"></div>
-        
+        <div class="full_food_chain_container">
+
+            <!-- first lay out our empty droppable elements -->
+            <div class="food_chain_image_container small droppable_answer apex_predator land column_three" data-animal-name="hawk">Apex Predator</div>
+            <div class="food_chain_image_container small droppable_answer apex_predator sea  column_three" data-animal-name="shark">Apex Predator</div>
+
+            <div class="food_chain_image_container small droppable_answer secondary_consumer land column_two" data-animal-name="banded_snake">Secondary Consumer</div>
+            <div class="food_chain_image_container small droppable_answer secondary_consumer sea  column_two" data-animal-name="bacalao_grouper">Secondary Consumer</div>
+
+            <div class="food_chain_image_container small droppable_answer primary_consumer land column_two"  data-animal-name="marine_iguana">Primary Consumer</div>
+            <div class="food_chain_image_container small droppable_answer primary_consumer sea  column_four" data-animal-name="flying_fish">Primary Consumer</div>
+
+            <div class="food_chain_image_container small droppable_answer producer land column_one" data-animal-name="prickly_cactus">Producer</div>
+            <div class="food_chain_image_container small droppable_answer producer sea  column_one" data-animal-name="green_sea_lettuce">Producer</div>
+            
+            <div class="food_chain_image_container small droppable_answer tertiary_consumer land column_four" data-animal-name="vampire_finch">Tertiary Consumer</div>
+            
+            <!-- then lay out the ones that are already answered -->
+            <div class="food_chain_image_container small primary_consumer iquana column_one"><img src="images/full_food_chain/land_iquana.png" class="image"></div>
+            <div class="food_chain_image_container small primary_consumer razor_surgeonfish column_one"><img src="images/full_food_chain/razor_surgeonfish.png" class="image"></div>
+            <div class="food_chain_image_container small producer plankton column_three"><img src="images/full_food_chain/plankton.png" class="image"></div>
+            <div class="food_chain_image_container small secondary_consumer blue_footed_booby column_four"><img src="images/full_food_chain/blue_footed_booby.png" class="image"></div>          
+            
+            <!-- finally the lines joining things together -->
+            <div class="chain_arrow straight     land_producer_to_land_primary_consumer"></div>
+            <div class="chain_arrow bottom_right land_primary_consumer_to_land_secondary_consumer"></div>
+            <div class="chain_arrow top_left     land_primary_consumer_to_land_apex_predator"></div>
+            <div class="chain_arrow top_left     land_seconday_consumer_to_land_apex_predator"></div>
+            <div class="chain_arrow top_left     land_seconday_consumer_to_land_apex_predator"></div>
+            <div class="chain_arrow top_right    land_tertiary_consumer_to_land_apex_predator"></div>
+            <div class="chain_arrow straight     land_tertiary_consumer_to_land_secondary_consumer"></div>
+            <div class="chain_arrow straight     land_seconday_consumer_to_land_tertiary_consumer"></div>
+            <div class="chain_arrow bottom_right sea_primary_consumer_to_land_apex_predator"></div>
+            <div class="chain_arrow straight     sea_producer_to_sea_primary_consumer"></div>
+            <div class="chain_arrow bottom_right sea_producer_to_land_primary_consumer"></div>
+            <div class="chain_arrow bottom_left  sea_primary_consumer_to_sea_secondary_consumer"></div>
+            <div class="chain_arrow bottom_left  sea_seconday_consumer_to_sea_apex_predator"></div>
+            <div class="chain_arrow bottom_left  sea_plankton_to_sea_primary_consumer"></div>
+            <div class="chain_arrow bottom_right sea_primary_consumer_to_sea_apex_predator"></div>
+            <div class="chain_arrow straight     sea_primary_consumer_to_land_secondary_consumer"></div>
+
+            
+        </div>
     </div>
-    
 </div>
 
 <script type="text/javascript">

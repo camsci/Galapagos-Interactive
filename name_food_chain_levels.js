@@ -77,6 +77,8 @@ var name_food_chain_levels = (function create_api() {
                 // go onto the final part of the game
                 top.game_logic.finished_name_food_chain_levels();
             }
+        } else {
+            // TODO: Show an unhappy face here
         }
     }
     
