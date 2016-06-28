@@ -53,6 +53,9 @@ var full_food_chain = (function create_api() {
         // if they have dropped the right word on the right square, allow it
         if ( transfer_data.level_name === target_data ) {
             
+            // display the correct answer animation!
+            top.game_logic.show_correct_answer();
+            
             // grab a pointer to the answer
             var answer_element = document.getElementById( transfer_data.element_id );
             
@@ -99,7 +102,8 @@ var full_food_chain = (function create_api() {
             }
             
         } else {
-            // TODO: Show an unhappy face here
+            // show the incorrect answer animation
+            top.game_logic.show_incorrect_answer();
         }
     }
     

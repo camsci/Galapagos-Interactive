@@ -254,6 +254,18 @@ var game_logic = ( function create_api() {
         add_event_listeners.to_element( document.getElementById( "modal_continue_button" ), "click", play_entire_food_chain );
     }
     
+    // TODO: Testing
+    function show_correct_answer() {
+        // animate our tick box
+        document.getElementById( "tick_element" ).style.webkitAnimationName = "answer_animation";
+    }
+
+    // TODO: Testing
+    function show_incorrect_answer() {
+        // animate our tick box
+        document.getElementById( "cross_element" ).style.webkitAnimationName = "answer_animation";
+    }
+    
     // return our public API
     return {
         go_to_habitat_choice            : go_to_habitat_choice,
@@ -268,7 +280,9 @@ var game_logic = ( function create_api() {
         set_current_question_index      : set_current_question_index,
         get_current_question_index      : get_current_question_index,
         show_species_profile            : show_species_profile,
-        finished_name_food_chain_levels : finished_name_food_chain_levels
+        finished_name_food_chain_levels : finished_name_food_chain_levels,
+        show_correct_answer             : show_correct_answer,
+        show_incorrect_answer           : show_incorrect_answer
     };
     
 })();

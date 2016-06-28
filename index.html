@@ -29,6 +29,9 @@
     <span class="button right" id="species_profile_button">Species Profile</span>
 </div>
 
+<div class="tick_element"  id="tick_element"></div>
+<div class="cross_element" id="cross_element"></div>
+
 <script type="text/javascript">
 
 // ----------
@@ -42,6 +45,16 @@ add_event_listeners.to_element( window, "load", index.display_intro_message );
 // this will attach event listeners to the elements in the page
 // ----------
 add_event_listeners.to_element( window, "load", index.attach_click_events );
+
+// TODO: Testing
+add_event_listeners.to_element( document.getElementById( "tick_element" ), "webkitAnimationEnd", function(){
+    document.getElementById( "tick_element" ).style.webkitAnimationName = '';
+} );
+
+// TODO: Testing
+add_event_listeners.to_element( document.getElementById( "cross_element" ), "webkitAnimationEnd", function(){
+    document.getElementById( "cross_element" ).style.webkitAnimationName = '';
+} );
 
 </script>
 
