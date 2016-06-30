@@ -37,7 +37,7 @@ var species_profiles = function() {
         var relevent_data = index_data[ json_id ];
         
         // declare an array to hold our markup
-        var dialogue_markup = [];
+        var dialogue_markup = [ "<div class=\"species_detail_container\">"];
         
         // add in the titles and images
         dialogue_markup.push( 
@@ -57,9 +57,17 @@ var species_profiles = function() {
         dialogue_markup.push( "<div class=\"modal_content first\"><span class=\"modal_content_title\">Habitat:<\/span>", relevent_data.habitat, "<\/div>" );
         dialogue_markup.push( "<div class=\"modal_content\"><span class=\"modal_content_title\">Food:<\/span>", relevent_data.food, "<\/div>" );
         dialogue_markup.push( "<div class=\"modal_content\"><span class=\"modal_content_title\">Predators:<\/span>", relevent_data.predators, "<\/div>" );
+
+        dialogue_markup.push( "<\/div>" );
+        
+        // add in the continue button
+        dialogue_markup.push( "<div class=\"modal_back_button\" id=\"modal_back_button\"><div class=\"modal_back_triangle\"></div></div>")
         
         // show the modal display, and say that we want it to be large in size
         modal_dialogue.display( dialogue_markup.join( "" ), "large" );
+
+        // add a listener to the continue button, to close the dialogue
+        add_event_listeners.to_element( document.getElementById( "modal_back_button" ), "click", modal_dialogue.remove );
         
         // add a listener to this element
         add_event_listeners.to_class_name( "modal_image_container", "click", detail_image_clicked );

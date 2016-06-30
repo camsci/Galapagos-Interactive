@@ -30,44 +30,6 @@ span.footbar_text {
     line-height: 53px;
 }
 
-div.modal_title {
-    font-weight: bold;
-    font-size:   50px;
-    color:       #d22f2f;
-    font-family: arial;
-}
-
-div.modal_content {
-    font-family:  arial;
-    font-size:    40px;
-    color:        gray;
-    margin-top:   20px;
-}
-
-div.modal_continue_button {
-    position:              absolute;
-    bottom:                10px;
-    right:                 10px;
-    width:                 62px;
-    height:                62px;
-    background:            #d22f2f;
-    -moz-border-radius:    50px;
-    -webkit-border-radius: 50px;
-    border-radius:         31px;
-    cursor:                pointer;
-}
-
-div.modal_continue_triangle {
-    width:         0px;
-    height:        0px;
-    border-top:    18px solid transparent;
-    border-left:   34px solid #FFFFFF;
-    border-bottom: 18px solid transparent;
-    position:      relative;
-    left:          20px;
-    top:           13px;
-}
-
 span.button {
     width:          114px;
     display:        inline-block;
@@ -130,87 +92,6 @@ div.image_container {
 img.image {
     height: 100%;
     width:  100%;
-}
-
-div.modal_title {
-    font-weight: bold;
-    font-size:   50px;
-    color:       #d22f2f;
-    font-family: arial;
-}
-
-div.modal_sub_title {
-    font-size:   40px;
-    color:       #d22f2f;
-    font-family: arial;
-    font-style:  italic;
-}
-
-span.modal_content_title {
-    padding-right: 10px;
-    color:         #d22f2f;
-}
-
-div.modal_content {
-    font-family:  arial;
-    font-size:    40px;
-    color:        gray;
-    margin-top:   20px;
-}
-
-div.modal_content.first {
-    margin-top: 0px;
-}
-
-div.modal_image_container {
-    height:      45%;
-    float:       right;
-    margin-left: 20px;
-    position:    relative;
-    top:         -45px;
-    cursor:      pointer;
-}
-
-img.modal_image {
-    height: 100%;    
-}
-
-div.modal_type_image_container {
-    width:    125px;
-    overflow: hidden;
-    height:   65px;
-}
-
-div.modal_type_image_container:hover::before {
-    content:          attr( data-label );
-    position:         absolute;
-    font-family:      arial;
-    background-color: purple;
-    width:            340px;
-    text-align:       center;
-    height:           40px;
-    border-radius:    10px;
-    font-size:        25px;
-    top:              83px;
-    line-height:      40px;
-    color:            #FFFFFF;
-}
-
-div.modal_full_screen_image_container { 
-    position:         absolute;
-    background-color: white;
-    overflow:         auto;
-    z-index:          4;
-    top:              0px;
-    bottom:           0px;
-    left:             0px;
-    right:            0px;
-    cursor:           pointer;
-    text-align:       center;
-}
-
-img.modal_full_screen_image{
-    height: 100%;
 }
 
 img.habitat_choice {
@@ -633,4 +514,186 @@ div.cross_element:after{
 @keyframes answer_animation {
     from { top: -200px; }
     to {  top: 50%; }
+}
+
+/* Modal Dialogue Section */
+div.modal_div {
+    position:         absolute; 
+    top:              0px;
+    bottom:           0px;
+    left:             0px;
+    right:            0px;
+    background-color: black;
+    opacity:          0.7;
+    z-index:          2;
+}
+
+div.modal_dialogue_container { 
+    position:         absolute;
+    background-color: white;
+    padding:          20px;
+    overflow:         auto;
+    z-index:          3;
+}
+
+div.modal_dialogue_container.large {
+    top:    40px;
+    bottom: 40px;
+    left:   40px;
+    right:  40px;
+}
+
+div.modal_dialogue_container.medium {
+    top:    140px;
+    bottom: 140px;
+    left:   140px;
+    right:  140px;
+}
+
+div.modal_title {
+    font-weight: bold;
+    font-size:   50px;
+    color:       #d22f2f;
+    font-family: arial;
+}
+
+div.modal_content {
+    font-family:  arial;
+    font-size:    40px;
+    color:        gray;
+    margin-top:   20px;
+}
+
+div.modal_title {
+    font-weight: bold;
+    font-size:   50px;
+    color:       #d22f2f;
+    font-family: arial;
+}
+
+div.modal_continue_button {
+    position:              absolute;
+    bottom:                10px;
+    right:                 10px;
+    width:                 62px;
+    height:                62px;
+    background:            #d22f2f;
+    -moz-border-radius:    50px;
+    -webkit-border-radius: 50px;
+    border-radius:         31px;
+    cursor:                pointer;
+}
+
+div.modal_continue_triangle {
+    width:         0px;
+    height:        0px;
+    border-top:    18px solid transparent;
+    border-left:   34px solid #FFFFFF;
+    border-bottom: 18px solid transparent;
+    position:      relative;
+    left:          20px;
+    top:           13px;
+}
+
+div.modal_back_button {
+    position:              absolute;
+    bottom:                10px;
+    left:                  10px;
+    width:                 62px;
+    height:                62px;
+    background:            #d22f2f;
+    -moz-border-radius:    50px;
+    -webkit-border-radius: 50px;
+    border-radius:         31px;
+    cursor:                pointer;
+}
+
+div.modal_back_triangle {
+    width:         0px;
+    height:        0px;
+    border-top:    18px solid transparent;
+    border-right:  34px solid #FFFFFF;
+    border-bottom: 18px solid transparent;
+    position:      relative;
+    left:          10px;
+    top:           13px;
+}
+
+div.modal_sub_title {
+    font-size:   40px;
+    color:       #d22f2f;
+    font-family: arial;
+    font-style:  italic;
+}
+
+span.modal_content_title {
+    padding-right: 10px;
+    color:         #d22f2f;
+}
+
+div.modal_content {
+    font-family:  arial;
+    font-size:    40px;
+    color:        gray;
+    margin-top:   20px;
+}
+
+div.modal_content.first {
+    margin-top: 0px;
+}
+
+div.species_detail_container {
+    height:   calc( 100% - 60px );
+    overflow: auto;
+}
+
+div.modal_image_container {
+    height:      45%;
+    float:       right;
+    margin-left: 20px;
+    position:    relative;
+    top:         -45px;
+    cursor:      pointer;
+}
+
+img.modal_image {
+    height: 100%;    
+}
+
+div.modal_type_image_container {
+    width:    125px;
+    overflow: hidden;
+    height:   65px;
+}
+
+div.modal_type_image_container:hover::before {
+    content:          attr( data-label );
+    position:         absolute;
+    font-family:      arial;
+    background-color: purple;
+    width:            340px;
+    text-align:       center;
+    height:           40px;
+    border-radius:    10px;
+    font-size:        25px;
+    top:              83px;
+    line-height:      40px;
+    color:            #FFFFFF;
+}
+
+div.modal_full_screen_image_container { 
+    position:         absolute;
+    background-color: white;
+    overflow:         hidden;
+    z-index:          4;
+    top:              0px;
+    bottom:           72px;
+    left:             0px;
+    right:            0px;
+    cursor:           pointer;
+    text-align:       center;
+}
+
+img.modal_full_screen_image{
+    height: 100%;
 }

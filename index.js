@@ -22,7 +22,7 @@ var index = (function create_api() {
         dialogue_markup.push( "<div class=\"modal_continue_button\" id=\"modal_continue_button\"><div class=\"modal_continue_triangle\"></div></div>")
         
         // show the modal display, and say that we want it to be medium in size
-        modal_dialogue.display( dialogue_markup.join( "" ), "medium", false );
+        modal_dialogue.display( dialogue_markup.join( "" ), "medium" );
         
         // add a listener to the continue button, to close the dialogue
         add_event_listeners.to_element( document.getElementById( "modal_continue_button" ), "click", modal_dialogue.remove );

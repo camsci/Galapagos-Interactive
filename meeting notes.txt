@@ -1,27 +1,27 @@
-On the "ANswer the questions part" make it obvious which square you are trying to fill ( gray out the others )
+DONE: On the "ANswer the questions part" make it obvious which square you are trying to fill ( gray out the others )
 
-Maybe look into the Font Sizes are the significance is a little confusing. 
+CHAT LATER: Maybe look into the Font Sizes are the significance is a little confusing. 
 
 On the main food chain part, add names to the ones that are in the chain already. Make the text permanantly there. Blue Footed Boobey should be in an orange box. 
 
 Show a version without the counter on the main screen, and also without the gray stuff
 
-Make the pictures look like buttons ( roll the corners and space out a little )
+DONE: Make the pictures look like buttons ( roll the corners and space out a little )
 
-Ensure it looks good on a 16x9 screen.
+HOPEFULLY DONE: Ensure it looks good on a 16x9 screen.
 
-On the full food chain screen, also have the success and fail feedback.
+DONE: On the full food chain screen, also have the success and fail feedback.
 
-Don't allow them to move things once they are in place.
+DONE: Don't allow them to move things once they are in place.
 
-Remove sound and full screen button.
+DONE: Remove sound and full screen button.
 
-Species profile button and reset button on all screens.
+DONE: Species profile button and reset button on all screens.
 
 Timeout should be 35 seconds. Throw an "ARe you still here" prompt. 10 seconds on that. 
 
-HOme screen. Don't think you can animate the ripple effect. Try some other HTML5/CSS3 stuff.
+Home screen. Don't think you can animate the ripple effect. Try some other HTML5/CSS3 stuff.
 
-On the animal details prompt have a back arrow. Then things are more like forward/back.
+DONE: On the animal details prompt have a back arrow. Then things are more like forward/back.
 
 On the species profile, put the description below the image, and have a speech bubble style triangle kicking up to point to the right one.
