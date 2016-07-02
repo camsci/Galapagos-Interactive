@@ -94,7 +94,7 @@ var full_food_chain = (function create_api() {
                 dialogue_markup.push( "<div class=\"modal_continue_button\" id=\"modal_continue_button\"><div class=\"modal_continue_triangle\"></div></div>");
                 
                 // show the modal display, and say that we want it to be medium in size
-                modal_dialogue.display( dialogue_markup.join( "" ), "medium", false );
+                modal_dialogue.display( dialogue_markup.join( "" ), "medium" );
 
                 // add a listener to the continue button, to close the dialogue
                 add_event_listeners.to_element( document.getElementById( "modal_continue_button" ), "click", top.game_logic.reset_game_immediately );
@@ -126,7 +126,7 @@ var full_food_chain = (function create_api() {
         dialogue_markup.push( "<div class=\"modal_continue_button\" id=\"modal_continue_button\"><div class=\"modal_continue_triangle\"></div></div>");
         
         // show the modal display, and say that we want it to be medium in size
-        modal_dialogue.display( dialogue_markup.join( "" ), "medium", false );
+        modal_dialogue.display( dialogue_markup.join( "" ), "medium" );
 
         // add a listener to the continue button, to close the dialogue
         add_event_listeners.to_element( document.getElementById( "modal_continue_button" ), "click", modal_dialogue.remove );
@@ -139,6 +139,9 @@ var full_food_chain = (function create_api() {
         
         // add a drag start listener
         add_event_listeners.to_class_name( "droppable_answer", "drop", dropped_on );
+        
+        // reset the auto timeout every time someone clicks
+        add_event_listeners.to_class_name( "draggable_image_answer", "dragstart", top.auto_reset.reset_timeout );
     }
     
     // return our public API

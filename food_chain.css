@@ -104,6 +104,7 @@ div.answer_image {
     overflow:      hidden;
     border-radius: 10px;
     height:        206px;
+    width:         293px;
 }
 
 div.food_chain_image_container {
@@ -281,7 +282,7 @@ div.razor_surgeonfish {
     top: 515px;
 }
 
-div.iquana {
+div.iguana {
     top: 239px;
 }
 
@@ -687,7 +688,7 @@ div.modal_full_screen_image_container {
     overflow:         hidden;
     z-index:          4;
     top:              0px;
-    bottom:           72px;
+    bottom:           78px;
     left:             0px;
     right:            0px;
     cursor:           pointer;

@@ -88,9 +88,13 @@ var basic_food_chain = (function create_api() {
 
         // set the food chain type.
         document.getElementById( "food_chain_type" ).innerHTML = top.game_logic.get_current_food_chain();
-        
-        add_event_listeners.to_class_name( "image", "click", answer_clicked );
 
+        // reset the auto timeout every time someone clicks
+        add_event_listeners.to_element( window, "click", top.auto_reset.reset_timeout );
+        
+        // when they click on the answer
+        add_event_listeners.to_class_name( "image", "click", answer_clicked );
+        
         // show the next question
         show_next_question();
     }

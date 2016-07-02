@@ -8,12 +8,12 @@ var basic_food_chain_data = {
         { 
             question       : "1. Which of these makes it own enery from the sun?",
             images         : [ 
-                "images/land_food_chain/land_iquana.png", 
-                "images/land_food_chain/prickly_pear_cactus.png", 
-                "images/land_food_chain/blue_footed_booby.png" 
+                "new_images/land_iguana.jpg", 
+                "new_images/prickly_cactus.jpg", 
+                "new_images/blue_footed_booby.jpg" 
             ],
             animals        : [ 
-                "Land Iquana", 
+                "Land Iguana", 
                 "Prickly Pear Cactus", 
                 "Blue-footed Booby" 
             ],
@@ -22,23 +22,23 @@ var basic_food_chain_data = {
         { 
             question       : "2. Which of these animals eats cacti?",
             images         : [ 
-                "images/land_food_chain/land_iquana.png", 
-                "images/land_food_chain/banded_snake.png", 
-                "images/land_food_chain/marine_iquana.png" 
+                "new_images/land_iguana.jpg", 
+                "new_images/banded_snake.jpg", 
+                "new_images/marine_iguana.jpg" 
             ],
             animals        : [ 
-                "Land Iquana", 
+                "Land iguana", 
                 "Galapagos Banded Snake", 
-                "Marine Iquana" 
+                "Marine iguana" 
             ],
-            answer : "Land Iquana"
+            answer : "Land iguana"
         },
         { 
-            question       : "3. Which animal may prey on young land iquanas?",
+            question       : "3. Which animal may prey on young land iguanas?",
             images         : [ 
-                "images/land_food_chain/blue_footed_booby.png", 
-                "images/land_food_chain/banded_snake.png", 
-                "images/land_food_chain/vampire_finch.png" 
+                "new_images/blue_footed_booby.jpg", 
+                "new_images/banded_snake.jpg", 
+                "new_images/vampire_finch.jpg" 
             ],
             animals        : [ 
                 "Blue-footed Booby", 
@@ -50,14 +50,14 @@ var basic_food_chain_data = {
         { 
             question       : "4. Which animal sometimes snacks on snakes?",
             images         : [ 
-                "images/land_food_chain/hawk.png", 
-                "images/land_food_chain/shark.png", 
-                "images/land_food_chain/marine_iquana.png" 
+                "new_images/hawk.jpg", 
+                "new_images/shark.jpg", 
+                "new_images/marine_iguana.jpg" 
             ],
             animals        : [ 
                 "Galapagos Hawk", 
                 "Galapagos Shark", 
-                "Marine Iquana" 
+                "Marine iguana" 
             ],
             answer : "Galapagos Hawk"
         }
@@ -68,12 +68,12 @@ var basic_food_chain_data = {
         { 
             question       : "1. Which of these makes its own enery from the sun?",
             images         : [ 
-                "images/sea_food_chain/marine_iquana.png", 
-                "images/sea_food_chain/bacaloa_grouper.png", 
-                "images/sea_food_chain/green_sea_lettuce.png" 
+                "new_images/marine_iguana.jpg", 
+                "new_images/bacalao_grouper.jpg", 
+                "new_images/green_sea_lettuce.jpg" 
             ],
             animals        : [ 
-                "Marine Iquana", 
+                "Marine iguana", 
                 "Bacaloa Grouper", 
                 "Green Sea Lettuce" 
             ],
@@ -82,12 +82,12 @@ var basic_food_chain_data = {
         { 
             question       : "2. Which of these animals feeds on green sea lettuce?",
             images         : [ 
-                "images/sea_food_chain/land_iquana.png", 
-                "images/sea_food_chain/razor_surgeonfish.png", 
-                "images/sea_food_chain/blue_footed_booby.png" 
+                "new_images/land_iguana.jpg", 
+                "new_images/razor_surgeonfish.jpg", 
+                "new_images/blue_footed_booby.jpg" 
             ],
             animals        : [ 
-                "Land Iquana", 
+                "Land iguana", 
                 "Razor Surgeonfish", 
                 "Blue-footed Booby" 
             ],
@@ -96,28 +96,28 @@ var basic_food_chain_data = {
         { 
             question       : "3. Which animal may prey on Surgeonfish?",
             images         : [ 
-                "images/sea_food_chain/flying_fish.png", 
-                "images/sea_food_chain/banded_snake.png", 
-                "images/sea_food_chain/bacaloa_grouper.png" 
+                "new_images/flying_fish.jpg", 
+                "new_images/banded_snake.jpg", 
+                "new_images/bacalao_grouper.jpg" 
             ],
             animals        : [ 
                 "Flying Fish", 
                 "Galapagos Banded Snake", 
-                "Bacaloa Grouper" 
+                "Bacalao Grouper" 
             ],
-            answer : "Bacaloa Grouper"
+            answer : "Bacalao Grouper"
         },
         { 
             question       : "4. Which animal is greey for groupers?",
             images         : [ 
-                "images/sea_food_chain/shark.png", 
-                "images/sea_food_chain/blue_footed_booby.png", 
-                "images/sea_food_chain/marine_iquana.png" 
+                "new_images/shark.jpg", 
+                "new_images/blue_footed_booby.jpg", 
+                "new_images/marine_iguana.jpg" 
             ],
             animals        : [ 
                 "Galapgos Shark", 
                 "Blue-footed Booby", 
-                "Marine Iquana" 
+                "Marine iguana" 
             ],
             answer : "Galapgos Shark"
         }

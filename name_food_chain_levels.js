@@ -100,6 +100,9 @@ var name_food_chain_levels = (function create_api() {
         
         // add a drag start listener
         add_event_listeners.to_class_name( "droppable_answer", "drop", dropped_on );
+        
+        // reset the auto timeout every time someone starts to drag an image
+        add_event_listeners.to_class_name( "draggable_answer", "dragstart", top.auto_reset.reset_timeout );
     }
     
     // return our public API

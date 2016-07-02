@@ -84,6 +84,9 @@ var species_profiles = function() {
 
         // Attach an event handler for when we click on the continue button, this will take us to the next step of the game
         add_event_listeners.to_element( document.getElementById( "continue_button" ), "click", top.game_logic.go_to_habitat_choice  );
+        
+        // reset the auto timeout every time someone clicks
+        add_event_listeners.to_element( window, "click", top.auto_reset.reset_timeout );
     }
     
     // return our public API

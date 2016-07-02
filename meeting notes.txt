@@ -25,3 +25,5 @@ Home screen. Don't think you can animate the ripple effect. Try some other HTML5
 DONE: On the animal details prompt have a back arrow. Then things are more like forward/back.
 
 On the species profile, put the description below the image, and have a speech bubble style triangle kicking up to point to the right one.
+
+You could use white and/or a pale blue (R=201 G=233 B=230) as background colours, and if all touch buttons could be done in purple (R=147 G=35 B=132) with white text then that will align with the colours used on other exhibits.

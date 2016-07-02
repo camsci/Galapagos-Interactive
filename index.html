@@ -10,6 +10,7 @@
 <script type="text/javascript" src="index.js"></script>
 <script type="text/javascript" src="basic_food_chain_data.js"></script>
 <script type="text/javascript" src="game_logic.js"></script>
+<script type="text/javascript" src="auto_reset.js"></script>
 <script type="text/javascript" src="add_event_listeners.js"></script>
 <script type="text/javascript" src="modal_dialogue.js"></script>
 
@@ -45,6 +46,17 @@ add_event_listeners.to_element( window, "load", index.display_intro_message );
 // ----------
 add_event_listeners.to_element( window, "load", index.attach_click_events );
 
+// ----------
+// Attach an event handler for when we have finished loading
+// this will start our auto reset library
+// ----------
+add_event_listeners.to_element( window, "load", auto_reset.start_timeout );
+
+// ----------
+// reset the auto timeout every time someone clicks
+// ----------
+add_event_listeners.to_element( window, "click", auto_reset.reset_timeout );
+
 // TODO: Testing
 add_event_listeners.to_element( document.getElementById( "tick_element" ), "webkitAnimationEnd", function(){
     document.getElementById( "tick_element" ).style.webkitAnimationName = '';
@@ -54,6 +66,8 @@ add_event_listeners.to_element( document.getElementById( "tick_element" ), "webk
 add_event_listeners.to_element( document.getElementById( "cross_element" ), "webkitAnimationEnd", function(){
     document.getElementById( "cross_element" ).style.webkitAnimationName = '';
 } );
+
+
 
 </script>
 
