@@ -64,7 +64,7 @@ var auto_reset = (function create_api() {
     // ----------
     function start_timeout() {
         
-        auto_reset_timeout = setTimeout( check_they_are_still_here, auto_reset_timeout_duration );
+        // TODO: auto_reset_timeout = setTimeout( check_they_are_still_here, auto_reset_timeout_duration );
     }
     
     // ----------
@@ -80,7 +80,7 @@ var auto_reset = (function create_api() {
         clearTimeout( auto_reset_timeout );
         
         // start a new timeout
-        start_timeout();
+        // TODO: start_timeout();
     }
     
     // return our API

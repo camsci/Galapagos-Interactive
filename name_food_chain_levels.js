@@ -101,6 +101,74 @@ var name_food_chain_levels = (function create_api() {
         // add a drag start listener
         add_event_listeners.to_class_name( "droppable_answer", "drop", dropped_on );
         
+        add_event_listeners.to_class_name( "draggable_answer", "touchmove", function( event ) { 
+            event.preventDefault(); 
+            var x = event.changedTouches[0].pageX - ( event.srcElement.offsetWidth / 2 );
+            var y = event.changedTouches[0].pageY - ( event.srcElement.offsetHeight / 2 );
+            event.srcElement.style.top = y + "px";
+            event.srcElement.style.left = x + "px";
+        } );
+        add_event_listeners.to_class_name( "draggable_answer", "touchend", function( event ) { 
+            event.preventDefault(); 
+
+            // hide the element ( this allows us to grab the element from underneath, very important! )
+            event.srcElement.style.top = "-500px";
+            
+            // get the level they have been moving around
+            var dragged_level = event.srcElement.getAttribute( "data-level-name" );
+
+            // work out the element they;ve just dropped it onto 
+            var dropped_target_element = document.elementFromPoint(
+                event.changedTouches[0].pageX,
+                event.changedTouches[0].pageY
+            );
+            
+            // get the level of the element they have dropped it onto
+            var dropped_level = dropped_target_element.getAttribute( "data-level-name" );
+            
+            // if it isnt one of our droppable answers
+            if ( dropped_level === null ) { 
+                return;
+            }
+            
+            if ( dragged_level == dropped_level ) {
+                // display the correct answer animation!
+                top.game_logic.show_correct_answer();
+                
+                // grab a pointer to the answer
+                var answer_element = event.srcElement;
+                
+                // add the level into the correct place
+                dropped_target_element.appendChild( answer_element );
+                
+                // remove the event listener from element
+                answer_element.removeEventListener( "dragstart", drag_started );
+                
+                // remove the position style
+                answer_element.style.position = "static";
+                
+                // remove the event listeners from the element we have dropped on
+                dropped_target_element.removeEventListener( "dragover", dragged_over );
+                dropped_target_element.removeEventListener( "drop",     dropped_on   );
+                
+                // show that we have completed this level
+                levels_completed.push( dragged_level );
+                
+                // we have finished this game, onto the next one! 
+                if ( levels_completed.length == 4 ) {
+                    // go onto the final part of the game
+                    top.game_logic.finished_name_food_chain_levels();
+                }
+            } else {
+                // show the incorrect answer animation
+                top.game_logic.show_incorrect_answer();
+                
+                // TODO: Put the element back
+                event.srcElement.style.top = "550px";
+            }
+            
+        } );
+        
         // reset the auto timeout every time someone starts to drag an image
         add_event_listeners.to_class_name( "draggable_answer", "dragstart", top.auto_reset.reset_timeout );
     }
