@@ -101,6 +101,9 @@ var name_food_chain_levels = (function create_api() {
         // add a drag start listener
         add_event_listeners.to_class_name( "droppable_answer", "drop", dropped_on );
         
+        // stop them from dragging the window
+        add_event_listeners.to_element( window, "touchmove", function( event ) { event.preventDefault(); } );
+        
         add_event_listeners.to_class_name( "draggable_answer", "touchmove", function( event ) { 
             event.preventDefault(); 
             var x = event.changedTouches[0].pageX - ( event.srcElement.offsetWidth / 2 );
@@ -127,7 +130,8 @@ var name_food_chain_levels = (function create_api() {
             var dropped_level = dropped_target_element.getAttribute( "data-level-name" );
             
             // if it isnt one of our droppable answers
-            if ( dropped_level === null ) { 
+            if ( dropped_level === null ) {
+                event.srcElement.style.top = "550px";
                 return;
             }
             

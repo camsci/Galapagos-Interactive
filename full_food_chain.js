@@ -140,18 +140,18 @@ var full_food_chain = (function create_api() {
         // add a drag start listener
         add_event_listeners.to_class_name( "droppable_answer", "drop", dropped_on );
         
+        // stop them from dragging the window
+        add_event_listeners.to_element( window, "touchmove", function( event ) { event.preventDefault(); } );
+        
         // reset the auto timeout every time someone clicks
         add_event_listeners.to_class_name( "draggable_image_answer", "dragstart", top.auto_reset.reset_timeout );
         
         add_event_listeners.to_class_name( "draggable_image_answer", "touchmove", function( event ) { 
             event.preventDefault(); 
             
-            var x = event.changedTouches[0].pageX - ( event.srcElement.parentNode.offsetWidth / 2 );
-            var y = event.changedTouches[0].pageY - ( event.srcElement.parentNode.offsetHeight / 2 );
+            var x = event.changedTouches[0].pageX - ( event.srcElement.parentNode.offsetWidth / 2 ) - document.getElementById( "full_food_chain" ).getBoundingClientRect().left;
+            var y = event.changedTouches[0].pageY - ( event.srcElement.parentNode.offsetHeight / 2 ) - document.getElementById( "full_food_chain" ).getBoundingClientRect().top;
             
-            // TODO: Remove bounding rect height + width from the x and y.
-            
-            console.log( x, y, event.srcElement.parentNode );
             event.srcElement.parentNode.style.top = y + "px";
             event.srcElement.parentNode.style.left = x + "px";
         } );
@@ -159,12 +159,17 @@ var full_food_chain = (function create_api() {
         add_event_listeners.to_class_name( "draggable_image_answer", "touchend", function( event ) { 
             event.preventDefault(); 
 
-            // hide the element ( this allows us to grab the element from underneath, very important! )
-            event.srcElement.style.top = "-500px";
-            
             // get the level they have been moving around
-            var dragged_level = event.srcElement.getAttribute( "data-animal-name" );
+            var dragged_level = event.srcElement.parentNode.getAttribute( "data-animal-name" );
 
+            // if they haven't dragged something that we want them to.
+            if ( dragged_level === null ) {
+                return;
+            }
+            
+            // hide the element ( this allows us to grab the element from underneath, very important! )
+            event.srcElement.parentNode.style.left = "-500px";
+            
             // work out the element they;ve just dropped it onto 
             var dropped_target_element = document.elementFromPoint(
                 event.changedTouches[0].pageX,
@@ -173,9 +178,11 @@ var full_food_chain = (function create_api() {
             
             // get the level of the element they have dropped it onto
             var dropped_level = dropped_target_element.getAttribute( "data-animal-name" );
-
+            
             // if it isnt one of our droppable answers
             if ( dropped_level === null ) { 
+                event.srcElement.parentNode.style.left = "250px";
+                console.log( event.srcElement.parentNode );
                 return;
             }
             
@@ -184,7 +191,7 @@ var full_food_chain = (function create_api() {
                 top.game_logic.show_correct_answer();
                 
                 // grab a pointer to the answer
-                var answer_element = event.srcElement.childNodes[0];
+                var answer_element = event.srcElement;
                 
                 // remove the parent element from the DOM
                 answer_element.parentNode.remove();
@@ -230,8 +237,8 @@ var full_food_chain = (function create_api() {
                 // show the incorrect answer animation
                 top.game_logic.show_incorrect_answer();
                 
-                // TODO: Put the element back
-                event.srcElement.style.top = "550px";
+                // Put the element back
+                event.srcElement.parentNode.style.left = "250px";
             }
             
         } );

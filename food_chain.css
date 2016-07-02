@@ -67,13 +67,13 @@ div.coloured_container {
 }
 
 div.full_food_chain {
-    height: 716px;
-    width:  1400px;
+    height: 990px;
+    width:  1880px;
 
     position: absolute;
-    top:      50%;
+    /*top:      50%;
     left:     50%;
-    margin:   -358px 0 0 -700px;
+    margin:   -358px 0 0 -700px;*/
     
     background-image: url( "images/full_food_chain/background_image.jpg" );
     background-size:   100% 100%;
@@ -128,8 +128,12 @@ div.food_chain_image_container.small {
     width:    155px;
     position: absolute;
     margin:   0px;
-    z-index:  2;
+    z-index:  3;
     border:   2px solid #FFFFFF;
+}
+
+div.draggable_image_answer {
+    z-index: 4 !important;
 }
 
 /* We want to be able to disable a food chain image container easily */
@@ -187,7 +191,7 @@ div.full_food_chain_draggable_container {
 
 div.full_food_chain_container {
     position: absolute;
-    top:      0px;
+    top:      170px;
     bottom:   0px;
     right:    0px;
     left:     40%;
@@ -203,7 +207,7 @@ div.apex_predator.land {
 }
 
 div.apex_predator.sea {
-    bottom: 5px;
+    bottom: 100px;
 }
 
 div.producer {
@@ -526,7 +530,7 @@ div.modal_div {
     right:            0px;
     background-color: black;
     opacity:          0.7;
-    z-index:          2;
+    z-index:          5;
 }
 
 div.modal_dialogue_container { 
@@ -534,7 +538,7 @@ div.modal_dialogue_container {
     background-color: white;
     padding:          20px;
     overflow:         auto;
-    z-index:          3;
+    z-index:          6;
 }
 
 div.modal_dialogue_container.large {
