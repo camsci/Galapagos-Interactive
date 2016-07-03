@@ -73,6 +73,12 @@
 
 // ----------
 // Attach an event handler for when we have finished loading
+// this will display an intro message
+// ----------
+add_event_listeners.to_element( window, "load", species_profiles.display_intro_message );
+
+// ----------
+// Attach an event handler for when we have finished loading
 // this will attach event listeners to the elements in the page
 // ----------
 add_event_listeners.to_element( window, "load", species_profiles.attach_click_events );

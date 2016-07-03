@@ -111,6 +111,7 @@ var name_food_chain_levels = (function create_api() {
             event.srcElement.style.top = y + "px";
             event.srcElement.style.left = x + "px";
         } );
+        
         add_event_listeners.to_class_name( "draggable_answer", "touchend", function( event ) { 
             event.preventDefault(); 
 
@@ -167,14 +168,15 @@ var name_food_chain_levels = (function create_api() {
                 // show the incorrect answer animation
                 top.game_logic.show_incorrect_answer();
                 
-                // TODO: Put the element back
+                // Put the element back
                 event.srcElement.style.top = "550px";
             }
             
         } );
         
         // reset the auto timeout every time someone starts to drag an image
-        add_event_listeners.to_class_name( "draggable_answer", "dragstart", top.auto_reset.reset_timeout );
+        add_event_listeners.to_class_name( "draggable_answer", "dragstart",  top.auto_reset.reset_timeout );
+        add_event_listeners.to_class_name( "draggable_answer", "touchstart", top.auto_reset.reset_timeout );
     }
     
     // return our public API

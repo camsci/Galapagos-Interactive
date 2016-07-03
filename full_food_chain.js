@@ -144,7 +144,8 @@ var full_food_chain = (function create_api() {
         add_event_listeners.to_element( window, "touchmove", function( event ) { event.preventDefault(); } );
         
         // reset the auto timeout every time someone clicks
-        add_event_listeners.to_class_name( "draggable_image_answer", "dragstart", top.auto_reset.reset_timeout );
+        add_event_listeners.to_class_name( "draggable_image_answer", "dragstart",  top.auto_reset.reset_timeout );
+        add_event_listeners.to_class_name( "draggable_image_answer", "touchstart", top.auto_reset.reset_timeout );
         
         add_event_listeners.to_class_name( "draggable_image_answer", "touchmove", function( event ) { 
             event.preventDefault(); 

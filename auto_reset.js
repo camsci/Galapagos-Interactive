@@ -63,8 +63,8 @@ var auto_reset = (function create_api() {
     //     @body_load_event - browser load event
     // ----------
     function start_timeout() {
-        
-        // TODO: auto_reset_timeout = setTimeout( check_they_are_still_here, auto_reset_timeout_duration );
+        // start the auto reset process
+        auto_reset_timeout = setTimeout( check_they_are_still_here, auto_reset_timeout_duration );
     }
     
     // ----------
@@ -73,14 +73,16 @@ var auto_reset = (function create_api() {
     // ----------
     function reset_timeout() {
         
-        // TODO: Testing
-        console.log( "Clicked" );
+        // if they click things other than the continue button on the splashscreen, we don't want to start the timer!
+        if ( auto_reset_timeout === undefined ) {
+            return;
+        }
         
         // clear the previous timeout
         clearTimeout( auto_reset_timeout );
         
         // start a new timeout
-        // TODO: start_timeout();
+        start_timeout();
     }
     
     // return our API

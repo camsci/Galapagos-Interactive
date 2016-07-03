@@ -3,6 +3,32 @@
 var species_profiles = function() {
     
     // ----------
+    // display the intro message ( called from the body onload event )
+    //     @onload_event is the browser load event 
+    // ----------
+    function display_intro_message( body_onload_event ) {
+        
+        // declare an array to hold our markup
+        var dialogue_markup = [];
+        
+        // add in our intro title
+        dialogue_markup.push( "<div class=\"modal_title\">", "Before we start to build food chains, we need to know a bit about our species...", "<\/div>" );
+        
+        // add in an explanation
+        dialogue_markup.push( "<div class=\"modal_content\">Click on the photos for more information about each species.<\/div>" );
+        dialogue_markup.push( "<div class=\"modal_content\">Click the \"enlarge\" buttons to enlarge the species photos.<\/div>" );
+        
+        // add in the continue button
+        dialogue_markup.push( "<div class=\"modal_continue_button\" id=\"modal_continue_button\"><div class=\"modal_continue_triangle\"></div></div>")
+        
+        // show the modal display, and say that we want it to be medium in size
+        modal_dialogue.display( dialogue_markup.join( "" ), "medium" );
+        
+        // add a listener to the continue button, to close the dialogue
+        add_event_listeners.to_element( document.getElementById( "modal_continue_button" ), "click", modal_dialogue.remove );
+    }
+    
+    // ----------
     // handle the mouse click event on the detail image
     //     @mouse_event is the event object passed in by the browser
     // ----------
@@ -91,8 +117,9 @@ var species_profiles = function() {
     
     // return our public API
     return {
-        grid_image_clicked  : grid_image_clicked,
-        attach_click_events : attach_click_events
+        grid_image_clicked    : grid_image_clicked,
+        attach_click_events   : attach_click_events,
+        display_intro_message : display_intro_message
     };
     
 }();

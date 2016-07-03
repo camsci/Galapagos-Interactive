@@ -38,6 +38,7 @@ var game_logic = ( function create_api() {
     function show_species_profile( click_event ) {
         // ensure the right iframe is displayed
         document.getElementById( "game_content"     ).style.display = "none";
+        document.getElementById( "splash_screen"    ).style.display = "none";
         document.getElementById( "species_profiles" ).style.display = "";
     }
     
@@ -254,13 +255,17 @@ var game_logic = ( function create_api() {
         add_event_listeners.to_element( document.getElementById( "modal_continue_button" ), "click", play_entire_food_chain );
     }
     
-    // TODO: Testing
+    // ----------
+    // show the correct answer animation
+    // ----------
     function show_correct_answer() {
         // animate our tick box
         document.getElementById( "tick_element" ).style.webkitAnimationName = "answer_animation";
     }
 
-    // TODO: Testing
+    // ----------
+    // show the incorrect answer animation
+    // ----------
     function show_incorrect_answer() {
         // animate our tick box
         document.getElementById( "cross_element" ).style.webkitAnimationName = "answer_animation";

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<title>Food Chain</title>
+
+<link rel="stylesheet" type="text/css" href="splash_screen.css">
+<link rel="stylesheet" type="text/css" href="food_chain.css">
+<script type="text/javascript" src="add_event_listeners.js"></script>
+
+</head>
+
+<body>
+
+<div class="splash_screen_images"></div>
+
+<div class="modal_continue_button" id="modal_continue_button" style="bottom: 50px; right: 50px; height: 100px; width: 100px; border-radius: 50px;">
+    <div class="modal_continue_triangle" style="left: 26px; border-top: 36px solid transparent; border-left: 64px solid #FFFFFF; border-bottom: 36px solid transparent;"></div>
+</div>
+
+<script type="text/javascript">
+
+// attach the reset button click handler
+add_event_listeners.to_element( document.getElementById( "modal_continue_button" ), "click", top.game_logic.show_species_profile  );
+
+// ----------
+// Attach an event handler for when we have clicked the start button
+// this will start our auto reset library
+// ----------
+add_event_listeners.to_element( document.getElementById( "modal_continue_button" ), "click", top.auto_reset.start_timeout );
+ 
+</script>
+
+</body>
+
+</html>
