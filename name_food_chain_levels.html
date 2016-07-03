@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<title>Food Chain</title>
+
+<link rel="stylesheet" type="text/css" href="food_chain.css">
+<script type="text/javascript" src="add_event_listeners.js"></script>
+<script type="text/javascript" src="name_food_chain_levels.js"></script>
+
+</head>
+
+<body>
+
+<div class="coloured_container">
+
+    <div class="modal_title">Drag the terms to identify which level of the food chain our species are in...</div>
+
+    <div class="food_chain_container">
+        <div class="food_chain_image_container medium"><img class="image" src="new_images/prickly_cactus.jpg"></div>
+        <div class="food_chain_arrow medium"></div>
+        <div class="food_chain_image_container medium"><img class="image" src="new_images/land_iguana.jpg"></div>
+        <div class="food_chain_arrow medium"></div>
+        <div class="food_chain_image_container medium"><img class="image" src="new_images/banded_snake.jpg"></div>
+        <div class="food_chain_arrow medium"></div>
+        <div class="food_chain_image_container medium"><img class="image" src="new_images/hawk.jpg"></div>
+    </div>
+
+    <div class="food_chain_container">
+        <div class="food_chain_image_container medium droppable_answer" data-level-name="Producer"></div>
+        <div class="food_chain_arrow medium"></div>
+        <div class="food_chain_image_container medium droppable_answer" data-level-name="Primary Consumer"></div>
+        <div class="food_chain_arrow medium"></div>
+        <div class="food_chain_image_container medium droppable_answer" data-level-name="Secondary Consumer"></div>
+        <div class="food_chain_arrow medium"></div>
+        <div class="food_chain_image_container medium droppable_answer" data-level-name="Apex Predator"></div>
+    </div>
+
+    <div class="food_chain_container">
+        <div class="food_chain_image_container medium"><img class="image" src="new_images/green_sea_lettuce.jpg"></div>
+        <div class="food_chain_arrow medium"></div>
+        <div class="food_chain_image_container medium"><img class="image" src="new_images/razor_surgeonfish.jpg"></div>
+        <div class="food_chain_arrow medium"></div>
+        <div class="food_chain_image_container medium"><img class="image" src="new_images/bacalao_grouper.jpg"></div>
+        <div class="food_chain_arrow medium"></div>
+        <div class="food_chain_image_container medium"><img class="image" src="new_images/shark.jpg"></div>
+    </div>
+
+    <div class="draggable_answer" draggable="true" id="answer_0" style="top: 620px; left: 230px;" data-level-name="Secondary Consumer">Secondary Consumer</div>
+    <div class="draggable_answer" draggable="true" id="answer_1" style="top: 615px; left: 460px;" data-level-name="Primary Consumer">Primary Consumer</div>
+    <div class="draggable_answer" draggable="true" id="answer_2" style="top: 622px; right: 460px;" data-level-name="Producer">Producer</div>
+    <div class="draggable_answer" draggable="true" id="answer_3" style="top: 605px;  right: 230px;" data-level-name="Apex Predator">Apex Predator</div>
+    
+</div>
+
+<script type="text/javascript">
+
+// ----------
+// Attach an event handler for when we have finished loading
+// this will actually start the game
+// ----------
+add_event_listeners.to_element( window, "load", name_food_chain_levels.start_game );
+
+</script>
+
+</body>
+
+</html>

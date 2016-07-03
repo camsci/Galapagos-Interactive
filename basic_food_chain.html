@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<title>Food Chain</title>
+
+<link rel="stylesheet" type="text/css" href="food_chain.css">
+<script type="text/javascript" src="add_event_listeners.js"></script>
+<script type="text/javascript" src="basic_food_chain.js"></script>
+
+</head>
+
+<body>
+
+<div class="coloured_container">
+
+    <div class="modal_title">Answer the questions to build the food chain for the <span id="food_chain_type">land</span>...</div>
+
+    <div class="food_chain_container">
+        <div class="food_chain_image_container" id="food_chain_image_container_0"></div>
+        <div class="food_chain_arrow"></div>
+        <div class="food_chain_image_container disabled" id="food_chain_image_container_1"></div>
+        <div class="food_chain_arrow"></div>
+        <div class="food_chain_image_container disabled" id="food_chain_image_container_2"></div>
+        <div class="food_chain_arrow"></div>
+        <div class="food_chain_image_container disabled" id="food_chain_image_container_3"></div>
+    </div>
+    
+    <div class="modal_content"><span class="modal_content_title" id="question"></span></div>
+    
+    <div class="answer_choice_container">
+        <div class="answer_image"><img class="image" id="image_0"></div>
+        <div class="answer_image"><img class="image" id="image_1"></div>
+        <div class="answer_image"><img class="image" id="image_2"></div>
+    </div>
+    
+</div>
+
+<script type="text/javascript">
+
+// ----------
+// Attach an event handler for when we have finished loading
+// this will actually start the game
+// ----------
+add_event_listeners.to_element( window, "load", basic_food_chain.start_game );
+
+</script>
+
+</body>
+
+</html>

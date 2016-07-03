@@ -6,38 +6,59 @@
 
 <title>Food Chain</title>
 
-<link rel="stylesheet" type="text/css" href="index.css">
+<link rel="stylesheet" type="text/css" href="food_chain.css">
 <script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="basic_food_chain_data.js"></script>
+<script type="text/javascript" src="game_logic.js"></script>
+<script type="text/javascript" src="auto_reset.js"></script>
+<script type="text/javascript" src="add_event_listeners.js"></script>
+<script type="text/javascript" src="modal_dialogue.js"></script>
 
 </head>
 
 <body>
 
-<div class="body_container">
-	<div class="image_grid_container">
-		
-		<div class="image_container left" data-label="Prickly Cactus">
-			<img src="images/prickly_cactus.png" class="image">
-		</div>
-		<div class="image_container middle" data-label="Flying Fish">
-			<img src="images/flying_fish.png" class="image">
-		</div>
-		<div class="image_container right" data-label="Vampire Finch">
-			<img src="images/vampire_finch.png" class="image">
-		</div>
-
-		<div class="image_container left" data-label="Land Iquana">
-			<img src="images/land_iquana.png" class="image">
-		</div>
-		<div class="image_container middle" data-label="Galapagos Banded Snake">
-			<img src="images/banded_snake.png" class="image">
-		</div>
-		<div class="image_container right" data-label="Galapagos Hawk">
-			<img src="images/hawk.png" class="image">
-		</div>
-		
-	</div>
+<div class="iframe_content">
+    <iframe src="splash_screen.html" id="splash_screen" class="content" scrolling="no"></iframe>
+    <iframe src="species_profiles.html" id="species_profiles" class="content" scrolling="no" style="display: none;"></iframe>
+    <iframe src="habitat_choice.html" id="game_content" class="content" scrolling="no" style="display: none;"></iframe>
 </div>
+
+<div class="footbar_navigation">
+    <span class="footbar_text">Food chains and Webs</span>
+    <span class="button right" id="reset_button">Reset</span>
+    <span class="button right" id="species_profile_button">Species Profile</span>
+</div>
+
+<div class="tick_element"  id="tick_element"></div>
+<div class="cross_element" id="cross_element"></div>
+
+<script type="text/javascript">
+
+// ----------
+// Attach an event handler for when we have finished loading
+// this will attach event listeners to the elements in the page
+// ----------
+add_event_listeners.to_element( window, "load", index.attach_click_events );
+
+// ----------
+// reset the auto timeout every time someone clicks
+// ----------
+add_event_listeners.to_element( window, "click", auto_reset.reset_timeout );
+
+// remove the animation name from the element when it has finished
+add_event_listeners.to_element( document.getElementById( "tick_element" ), "webkitAnimationEnd", function(){
+    document.getElementById( "tick_element" ).style.webkitAnimationName = '';
+} );
+
+// remove the animation name from the element when it has finished
+add_event_listeners.to_element( document.getElementById( "cross_element" ), "webkitAnimationEnd", function(){
+    document.getElementById( "cross_element" ).style.webkitAnimationName = '';
+} );
+
+
+
+</script>
 
 </body>
 

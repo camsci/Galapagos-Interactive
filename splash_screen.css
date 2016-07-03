@@ -1,0 +1,21 @@
+div.splash_screen_images {
+    position:                   absolute;
+    top:                        20px;
+    bottom:                     20px;
+    left:                       20px;
+    right:                      20px;
+    animation-name:             splash_screen;
+    -webkit-animation-duration: 10s;
+    animation-iteration-count:  infinite;
+    animation-timing-function:  linear;
+    background-image:           url('new_images/splash_screen/shark.jpg');
+}
+
+@keyframes splash_screen {
+    0% { background-image: url('new_images/splash_screen/shark.jpg'); }
+    16% { background-image: url('new_images/splash_screen/razor_surgeonfish.jpg'); }
+    33% {  background-image: url('new_images/splash_screen/bacalao_grouper.jpg'); }
+    50% { background-image: url('new_images/splash_screen/shark.jpg'); }
+    66% { background-image: url('new_images/splash_screen/razor_surgeonfish.jpg'); }
+    82% {  background-image: url('new_images/splash_screen/bacalao_grouper.jpg'); }
+}
