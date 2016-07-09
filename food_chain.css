@@ -1,3 +1,9 @@
+/* First things first, set up the font! */
+@font-face {
+    font-family: Montserrat-Regular
+    src:         url( fonts/Montserrat-Regular.odt );
+}
+
 div.iframe_content{
     position: absolute;
     top:      0px;
@@ -13,19 +19,19 @@ iframe.content{
 }
 
 div.footbar_navigation {
-    background-color: #3E3E3E;
+    background-color: RGB( 122, 134, 142 );
     position:         absolute;
     bottom:           0px;
     left:             0px;
     right:            0px;
     height:           53px;
-    padding-left:     40px;
-    padding-right:    40px;
+    padding-left:     20px;
+    padding-right:    20px;
 }
 
 span.footbar_text { 
     color:       white;
-    font-family: arial;
+    font-family: Montserrat-Regular;
     font-size:   22px;
     line-height: 53px;
 }
@@ -35,7 +41,7 @@ span.button {
     display:        inline-block;
     color:          #FFFFFF;
     font-size:      17px;
-    font-family:    arial;
+    font-family:    Montserrat-Regular;
     cursor:         pointer;
     border-radius:  5px;
     box-shadow:     0 0 0 1px #90908f;
@@ -48,7 +54,7 @@ span.button {
     margin-bottom:  1px;
     margin-left:    6px;
     margin-right:   2px;
-    background:     linear-gradient(#d22f2f, #d61e1e);
+    background:     RGB( 147, 35, 132 );
 }
 
 span.button.right {
@@ -61,21 +67,16 @@ div.coloured_container {
     bottom:     0px;
     left:       0px;
     right:      0px;
-    background: radial-gradient( #FFFFFF, #c7c7c7, #656565 );
+    background: RGB( 227, 234, 238 );
     padding:    20px;
     text-align: center;
 }
 
 div.full_food_chain {
-    height: 990px;
-    width:  1880px;
-
-    position: absolute;
-    /*top:      50%;
-    left:     50%;
-    margin:   -358px 0 0 -700px;*/
-    
-    background-image: url( "images/full_food_chain/background_image.jpg" );
+    height:            990px;
+    width:             1880px;
+    position:          absolute;    
+    background-image:  url( "new_images/background_image.jpg" );
     background-size:   100% 100%;
     background-repeat: no-repeat;
 }
@@ -94,8 +95,17 @@ img.image {
     width:  100%;
 }
 
+div.habitat_choice_container {
+    margin:     auto;
+    margin-top: 20px;
+    width:      1200px;
+    height:     300px;
+}
+
 img.habitat_choice {
     cursor: pointer;
+    height: 100%;
+    width:  100%;
 }
 
 div.answer_image { 
@@ -103,33 +113,36 @@ div.answer_image {
     cursor:        pointer;
     overflow:      hidden;
     border-radius: 10px;
-    height:        206px;
-    width:         293px;
+    height:        300px;
+    width:         400px;
 }
 
 div.food_chain_image_container {
     margin-top:       20px;
-    border:           1px solid #d22f2f;
-    height:           206px;
+    border:           1px solid RGB( 197, 38, 53 );
+    height:           300px;
     display:          inline-block;
-    width:            293px;
+    width:            400px;
     background-color: #FFFFFF;
 }
 
 /* We use a smaller version of the image container on the name food chain levels page */
 div.food_chain_image_container.medium {
-    height: 130px;
-    width:  193px;
+    height: 200px;
+    width:  300px;
 }
 
 /* We use an even smaller version of the image container on the name food chain levels page */
 div.food_chain_image_container.small {
-    height:   70px;
-    width:    155px;
-    position: absolute;
-    margin:   0px;
-    z-index:  3;
-    border:   2px solid #FFFFFF;
+    height:      70px;
+    width:       155px;
+    position:    absolute;
+    margin:      0px;
+    z-index:     3;
+    border:      2px solid #FFFFFF;
+    font-family: Montserrat-Regular;
+    font-size:   28px;
+    color:       white;
 }
 
 div.draggable_image_answer {
@@ -148,10 +161,10 @@ div.food_chain_arrow {
     width:         0px;
     height:        0px;
     border-top:    18px solid transparent;
-    border-left:   34px solid #d22f2f;
+    border-left:   34px solid RGB( 197, 38, 53 );
     border-bottom: 18px solid transparent;
     position:      relative;
-    top:           -85px;
+    top:           -125px;
 }
 
 /* When we are using medium containers, we need a different top position */
@@ -164,15 +177,15 @@ div.answer_choice_container {
 }
 
 div.draggable_answer {
-    height:           130px;
-    width:            193px;
-    background-color: purple;
+    height:           200px;
+    width:            300px;
+    background-color: RGB( 147, 35, 132 );
     color:            white;
-    font-family:      arial;
+    font-family:      Montserrat-Regular;
     float:            left;
-    font-size:        30px;
+    font-size:        50px;
     text-align:       center;
-    word-spacing:     193px;
+    word-spacing:     200px;
     position:         absolute;
 }
 
@@ -291,8 +304,8 @@ div.iguana {
 }
 
 div.chain_arrow {
-    width:         0px;
-    position:      absolute;
+    width:    0px;
+    position: absolute;
 }
 
 div.chain_arrow.straight {
@@ -558,22 +571,8 @@ div.modal_dialogue_container.medium {
 div.modal_title {
     font-weight: bold;
     font-size:   50px;
-    color:       #d22f2f;
-    font-family: arial;
-}
-
-div.modal_content {
-    font-family:  arial;
-    font-size:    40px;
-    color:        gray;
-    margin-top:   20px;
-}
-
-div.modal_title {
-    font-weight: bold;
-    font-size:   50px;
-    color:       #d22f2f;
-    font-family: arial;
+    color:       RGB( 197, 38, 53 );
+    font-family: Montserrat-Regular;
 }
 
 div.modal_continue_button {
@@ -582,7 +581,7 @@ div.modal_continue_button {
     right:                 10px;
     width:                 62px;
     height:                62px;
-    background:            #d22f2f;
+    background:            RGB( 147, 35, 132 );
     -moz-border-radius:    50px;
     -webkit-border-radius: 50px;
     border-radius:         31px;
@@ -606,7 +605,7 @@ div.modal_back_button {
     left:                  10px;
     width:                 62px;
     height:                62px;
-    background:            #d22f2f;
+    background:            RGB( 147, 35, 132 );
     -moz-border-radius:    50px;
     -webkit-border-radius: 50px;
     border-radius:         31px;
@@ -626,8 +625,8 @@ div.modal_back_triangle {
 
 div.modal_sub_title {
     font-size:   40px;
-    color:       #d22f2f;
-    font-family: arial;
+    color:       RGB( 197, 38, 53 );
+    font-family: Montserrat-Regular;
     font-style:  italic;
 }
 
@@ -637,9 +636,9 @@ span.modal_content_title {
 }
 
 div.modal_content {
-    font-family:  arial;
+    font-family:  Montserrat-Regular;
     font-size:    40px;
-    color:        gray;
+    color:        RGB( 122, 134, 142 );
     margin-top:   20px;
 }
 
@@ -674,7 +673,7 @@ div.modal_type_image_container {
 div.modal_type_image_container:hover::before {
     content:          attr( data-label );
     position:         absolute;
-    font-family:      arial;
+    font-family:      Montserrat-Regular;
     background-color: purple;
     width:            340px;
     text-align:       center;
