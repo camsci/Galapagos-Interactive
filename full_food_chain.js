@@ -14,7 +14,7 @@ var full_food_chain = (function create_api() {
         var drag_data = {
             level_name : drag_started_event.target.getAttribute( "data-animal-name" ),
             element_id : drag_started_event.target.getAttribute(  "id"             )
-        }
+        };
         
         // add the text of the food chain level we are dragging into our event
         drag_started_event.dataTransfer.setData( "text", JSON.stringify( drag_data ) );

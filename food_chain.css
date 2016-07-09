@@ -74,7 +74,7 @@ div.coloured_container {
 
 div.full_food_chain {
     height:            990px;
-    width:             1880px;
+    width:             1860px;
     position:          absolute;    
     background-image:  url( "new_images/background_image.jpg" );
     background-size:   100% 100%;
@@ -491,8 +491,8 @@ div.tick_element {
     width:                      400px;
     margin-left:                -200px;
     margin-top:                 -200px;
-    border-left:                20px solid green;
-    border-bottom:              20px solid green;
+    border-left:                20px solid RGB( 96, 188, 87 );
+    border-bottom:              20px solid RGB( 96, 188, 87 );
     -ms-transform:              rotate(-45deg);
     -webkit-transform:          rotate(-45deg);
     transform:                  rotate(-45deg);
@@ -512,8 +512,8 @@ div.cross_element:before, div.cross_element:after{
     content:'';
     position: absolute;
     width: 400px;
-    height: 10px;
-    background-color: red;
+    height: 20px;
+    background-color: RGB( 197, 38, 53 );
 }
 
 div.cross_element:before{
