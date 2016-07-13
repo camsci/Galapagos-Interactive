@@ -11,7 +11,7 @@ var index_data = {
 		food             : "Like all plants, the prickly pear cactus gains all the energy it needs from the sun. The sun's energy helps plants to turn carbon dioxide and water into oxygen and sugar, a process called <b>photosynthesis<\/b>. All plants are known as producers.",
 		predators        : "Despite their sharp spikes, the pricky pear cactus is eaten by a wide range of animals. these include giant tortoises, <b>land iguanas<\/b> and some insects.",
 		image_path       : "new_images/prickly_cactus.jpg",
-		type_image_path  : "images/species_profiles/producer.png",
+		type_image_path  : "new_images/species_profiles/producer.png",
 		type_description : "PRODUCER"
 	},
 	
@@ -23,7 +23,7 @@ var index_data = {
 		food             : "Flying fish feed on a variety of small organisms including krill and <b>plankton<\/b>",
 		predators        : "Flying fish are predated upon by seabirds such as the <b>blue-footed booby<\/b>.",
 		image_path       : "new_images/flying_fish.jpg",
-		type_image_path  : "images/species_profiles/primary_consumer.png",
+		type_image_path  : "new_images/species_profiles/primary_consumer.png",
 		type_description : "PRIMARY CONSUMER"
 	},
 	
@@ -35,7 +35,7 @@ var index_data = {
 		food             : "The vampire finch has evolved an unusal diet, drinking the <b>blood of sea birds<\/b> such as the <b>blue-footed booby<\/b>.",
 		predators        : "The main predator of all Galapagos finches is the <b>Galapagos hawk<\/b> but they may also be hunted by owls and <b>snakes<\/b>.",
 		image_path       : "new_images/vampire_finch.jpg",
-		type_image_path  : "images/species_profiles/secondary_consumer.png",
+		type_image_path  : "new_images/species_profiles/secondary_consumer.png",
 		type_description : "SECONDARY CONSUMER"
 	},
 	
@@ -47,7 +47,7 @@ var index_data = {
 		food             : "Land iguanas are primarily <b>herbivores<\/b>, feeding on low-growing pants and shrubs such as the <b>prickly pear cactus<\/b>, but some will also eat insects.",
 		predators        : "Land iguanas are predated on by <b>hawks<\/b>, herons and <b>snakes<\/b>.",
 		image_path       : "new_images/land_iguana.jpg",
-		type_image_path  : "images/species_profiles/primary_consumer.png",
+		type_image_path  : "new_images/species_profiles/primary_consumer.png",
 		type_description : "PRIMARY CONSUMER"
 	},
 	
@@ -59,7 +59,7 @@ var index_data = {
 		food             : "Galapagos banded snakes are constrictors and are only mildly poisonous. They feed on lava lizards, geckos, locusts, <b>young land iguanas<\/b> and rice rats.",
 		predators        : "The Galapagos banded snake is predated on primarily by the Galapagos hawk, but also by owls and some herons.",
 		image_path       : "new_images/banded_snake.jpg",
-		type_image_path  : "images/species_profiles/secondary_consumer.png",
+		type_image_path  : "new_images/species_profiles/secondary_consumer.png",
 		type_description : "SECONDARY CONSUMER"
 	},
 	
@@ -71,7 +71,7 @@ var index_data = {
 		food             : "Both a <b>predator<\/b> and a <b>scavenger<\/b>, the Galapagos hawk feeds on <b>young iguanas<\/b>, lizards, <b>small birds<\/b>, rats, some insects and carrion such as dead sea lions.",
 		predators        : "As an <b>apex predator<\/b>, the Galapagos hawk sits at the top of the food chain and has no natural predators.",
 		image_path       : "new_images/hawk.jpg",
-		type_image_path  : "images/species_profiles/apex_predator.png",
+		type_image_path  : "new_images/species_profiles/apex_predator.png",
 		type_description : "APEX PREDATOR"
 	},
 	
@@ -83,7 +83,7 @@ var index_data = {
 		food             : "Most types of algae get their energy from the same source that plants do: the sun. The suns energy helps algae to turn dissolved carbon dioxide and water into oxygen and sugar, a process called <b>photosynthesis<\/b>. Like plants, this seaweed is a <b>producer<\/b>.",
 		predators        : "With very little defence, green sea lettuce is eaten by many <b>marine herbivores<\/b>. These include crabs, marine snails, herbivorous fish such as <b>razor surgeonfish<\/b> and the famous <b>marine iguana<\/b>.",
 		image_path       : "new_images/green_sea_lettuce.jpg",
-		type_image_path  : "images/species_profiles/producer.png",
+		type_image_path  : "new_images/species_profiles/producer.png",
 		type_description : "PRODUCER"
 	},
 	
@@ -95,7 +95,7 @@ var index_data = {
 		food             : "Surgeonfish are <b>herbivores<\/b>, eating algae such as <b>green sea lettuce<\/b>.",
 		predators        : "Growing up to 45cm long, razor surgeonfish are hunted by large predatory fish such as the <b>bacalao grouper<\/b> and sharks.",
 		image_path       : "new_images/razor_surgeonfish.jpg",
-		type_image_path  : "images/species_profiles/primary_consumer.png",
+		type_image_path  : "new_images/species_profiles/primary_consumer.png",
 		type_description : "PRIMARY CONSUMER"
 	},
 	
@@ -107,7 +107,7 @@ var index_data = {
 		food             : "The bacalao grouper is primarily a <b>piscivore<\/b>, feeding on smaller fish such as the <b>razor surgeonfish<\/b> but also feeds on shrimps and crabs.",
 		predators        : "As a relatively large (1m in length) predatory fish, the bacalao groupers have few predators but may be eaten by <b>sharks<\/b>.",
 		image_path       : "new_images/bacalao_grouper.jpg",
-		type_image_path  : "images/species_profiles/secondary_consumer.png",
+		type_image_path  : "new_images/species_profiles/secondary_consumer.png",
 		type_description : "SECONDARY CONSUMER"
 	},
 	
@@ -119,7 +119,7 @@ var index_data = {
 		food             : "As a large predatory fish, the Galapagos shark feeds on bony fish such as the <b>bacalao grouper<\/b>, squid, octopus, <b>marine iguanas<\/b> and occasionally sea lions.",
 		predators        : "As an <b>apex predator<\/b>, the Galapagos shark is top of the marine food chain however when small, they may be predated on by members of their own species or other sharks.",
 		image_path       : "new_images/shark.jpg",
-		type_image_path  : "images/species_profiles/apex_predator.png",
+		type_image_path  : "new_images/species_profiles/apex_predator.png",
 		type_description : "APEX PREDATOR"
 	},
 	
@@ -131,7 +131,7 @@ var index_data = {
 		food             : "The blue-footed booby is primarily a piscivore, feeding on small fish such as <b>flying fish<\/b>, but will occasionally feed on squid.",
 		predators        : "Blue-footed boobies have few predators but the <b>Galapagos hawk<\/b> targets them as chicks. Adults on the islands of Wolf and Darwin may also get 'predated' on by <b>vampire finches<\/b>, although this does not normally result in the death of the booby.",
 		image_path       : "new_images/blue_footed_booby.jpg",
-		type_image_path  : "images/species_profiles/secondary_consumer.png",
+		type_image_path  : "new_images/species_profiles/secondary_consumer.png",
 		type_description : "SECONDARY CONSUMER"
 	},
 	
@@ -143,7 +143,7 @@ var index_data = {
 		food             : "Plankton is made up of both algae and animals. The algae gets energy from the sun in the same way as other alga and plants do (it is a <b>producer<\/b>).",
 		predators        : "Plankton is eaten by lots of different animals, from the samll (shrimps, corals, marine snails) to the medium (lobsters, <b>fish<\/b>, anemones) to the very large (whale sharks, whales)!",
 		image_path       : "new_images/plankton.jpg",
-		type_image_path  : "images/species_profiles/producer.png",
+		type_image_path  : "new_images/species_profiles/producer.png",
 		type_description : "PRODUCER"
 	},
 	
@@ -155,7 +155,7 @@ var index_data = {
 		food             : "Marine iguanas graze on seaweed including the <b>green sea lettuce<\/b> growing on the coastal rocks, sometimes diving several metres to find their food.",
 		predators        : "Young marine iguanas are preyed on by <b>Galapagos hawks<\/b> and may be caught by sharks when they venture off the coast. Galapagos sea lions often chase them in the water and fling them around if they catch them - this is a form of play and it is not thought that they eat them.",
 		image_path       : "new_images/marine_iguana.jpg",
-		type_image_path  : "images/species_profiles/primary_consumer.png",
+		type_image_path  : "new_images/species_profiles/primary_consumer.png",
 		type_description : "PRIMARY CONSUMER"
 	}
 	

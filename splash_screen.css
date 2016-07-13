@@ -12,10 +12,53 @@ div.splash_screen_images {
 }
 
 @keyframes splash_screen {
-    0% { background-image: url('new_images/splash_screen/shark.jpg'); }
+    0%  { background-image: url('new_images/splash_screen/shark.jpg'); }
     16% { background-image: url('new_images/splash_screen/razor_surgeonfish.jpg'); }
-    33% {  background-image: url('new_images/splash_screen/bacalao_grouper.jpg'); }
+    33% { background-image: url('new_images/splash_screen/bacalao_grouper.jpg'); }
     50% { background-image: url('new_images/splash_screen/shark.jpg'); }
     66% { background-image: url('new_images/splash_screen/razor_surgeonfish.jpg'); }
-    82% {  background-image: url('new_images/splash_screen/bacalao_grouper.jpg'); }
+    82% { background-image: url('new_images/splash_screen/bacalao_grouper.jpg'); }
+}
+
+div.modal_continue_button {
+    bottom:        50px; 
+    right:         50px; 
+    height:        100px; 
+    width:         100px; 
+    border-radius: 50px;
+}
+
+div.modal_continue_triangle {
+    left:          26px; 
+    border-top:    36px solid transparent; 
+    border-left:   64px solid #FFFFFF; 
+    border-bottom: 36px solid transparent;
+}
+
+div.question_text {
+    position:    absolute; 
+    font-size:   200px;
+    font-family: Montserrat-Regular;
+    bottom:      50px;
+    left:        20px;
+    right:       20px;
+    text-align:  center;
+    color:       RGB( 147, 35, 132 );
+}
+
+div.question_text:after {
+    animation-name:             splash_screen_question_text;
+    -webkit-animation-duration: 10s;
+    animation-iteration-count:  infinite;
+    animation-timing-function:  linear; 
+    content:                    "Who";
+}
+
+@keyframes splash_screen_question_text {
+    0%  { content: "Who"; }
+    16% { content: "Eats"; }
+    33% { content: "Who?"; }
+    50% { content: "Who"; }
+    66% { content: "Eats"; }
+    82% { content: "Who"; }
 }
