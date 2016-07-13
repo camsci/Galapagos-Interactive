@@ -19,7 +19,7 @@ var species_profiles = function() {
         dialogue_markup.push( "<div class=\"modal_content\">Click the \"enlarge\" buttons to enlarge the species photos.<\/div>" );
         
         // add in the continue button
-        dialogue_markup.push( "<div class=\"modal_continue_button\" id=\"modal_continue_button\"><div class=\"modal_continue_triangle\"></div></div>")
+        dialogue_markup.push( "<div class=\"modal_continue_button\" id=\"modal_continue_button\"><div class=\"modal_continue_triangle\"></div></div>");
         
         // show the modal display, and say that we want it to be medium in size
         modal_dialogue.display( dialogue_markup.join( "" ), "medium" );
@@ -32,7 +32,7 @@ var species_profiles = function() {
     // handle the mouse click event on the detail image
     //     @mouse_event is the event object passed in by the browser
     // ----------
-    var detail_image_clicked = function( mouse_event ) {
+    function detail_image_clicked( mouse_event ) {
         
         // flip the class names 
         if ( mouse_event.srcElement.className == "modal_image" ) {
@@ -48,7 +48,7 @@ var species_profiles = function() {
     // handle the mouse click event on the grid image
     //     @mouse_event is the event object passed in by the browser
     // ----------
-    var grid_image_clicked = function( mouse_event ) {
+    function grid_image_clicked( mouse_event ) {
         
         // grab the JSON id from the element
         var json_id = mouse_event.srcElement.getAttribute( "data-json-id" );
@@ -87,7 +87,7 @@ var species_profiles = function() {
         dialogue_markup.push( "<\/div>" );
         
         // add in the continue button
-        dialogue_markup.push( "<div class=\"modal_back_button\" id=\"modal_back_button\"><div class=\"modal_back_triangle\"></div></div>")
+        dialogue_markup.push( "<div class=\"modal_back_button\" id=\"modal_back_button\"><div class=\"modal_back_triangle\"></div></div>");
         
         // show the modal display, and say that we want it to be large in size
         modal_dialogue.display( dialogue_markup.join( "" ), "large" );

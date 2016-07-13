@@ -37,9 +37,6 @@ var basic_food_chain = (function create_api() {
         // validate it, seeing if it is right
         if ( top.game_logic.validate_answer( answer ) ) {
             
-            // display the correct answer animation!
-            top.game_logic.show_correct_answer();
-            
             // take a copy of the iamge they clicked on
             var image_to_display = click_event.srcElement.cloneNode();
             
@@ -73,6 +70,9 @@ var basic_food_chain = (function create_api() {
 
             // show the next question
             show_next_question();
+
+            // display the correct answer animation!
+            top.game_logic.show_correct_answer();
             
         } else {
             // show the incorrect answer animation
