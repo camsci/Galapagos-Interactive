@@ -4,7 +4,7 @@ var auto_reset = (function create_api() {
     
     "use strict";
     
-    /*global modal_dialogue*/
+    /*global modal_dialogue,add_event_listeners,game_logic*/
     
     // keep a pointer to the auto reset timeout
     var auto_reset_timeout;
@@ -63,13 +63,13 @@ var auto_reset = (function create_api() {
         dialogue_markup.push( "<div class=\"modal_continue_button\" id=\"modal_continue_button\"><div class=\"modal_continue_triangle\"></div></div>");
         
         // show the modal display, and say that we want it to be medium in size
-        // TODO: modal_dialogue.display( dialogue_markup.join( "" ), "medium" );
+        modal_dialogue.display( dialogue_markup.join( "" ), "medium" );
 
         // add a listener to the continue button, to close the dialogue
-        // TODO: add_event_listeners.to_element( document.getElementById( "modal_continue_button" ), "click", we_are_still_here );
+        add_event_listeners.to_element( document.getElementById( "modal_continue_button" ), "click", we_are_still_here );
         
         // set up a timeout if they don't click on the prompt
-        // TODO: we_are_still_here_timeout = setTimeout( game_logic.reset_game_immediately, we_are_still_here_timeout_duration );
+        we_are_still_here_timeout = setTimeout( game_logic.reset_game_immediately, we_are_still_here_timeout_duration );
     }
         
     // ----------
@@ -84,10 +84,10 @@ var auto_reset = (function create_api() {
         }
         
         // clear the previous timeout
-        // TODO: clearTimeout( auto_reset_timeout );
+        clearTimeout( auto_reset_timeout );
         
         // start a new timeout
-        // TODO: start_timeout();
+        start_timeout();
     }
     
     // return our API
