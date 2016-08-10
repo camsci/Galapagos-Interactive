@@ -6,7 +6,7 @@ var basic_food_chain_data = {
     // store all of the questions and answers for the land here
     land : [
         { 
-            question       : "1. Which of these makes it own enery from the sun?",
+            question       : "1. Which of these makes it own energy from the sun?",
             images         : [ 
                 "new_images/land_iguana.jpg", 
                 "new_images/prickly_cactus.jpg", 
@@ -66,7 +66,7 @@ var basic_food_chain_data = {
     // store all of the questions and answers for the sea here
     sea  : [
         { 
-            question       : "1. Which of these makes its own enery from the sun?",
+            question       : "1. Which of these makes its own energy from the sun?",
             images         : [ 
                 "new_images/marine_iguana.jpg", 
                 "new_images/bacalao_grouper.jpg", 
@@ -108,7 +108,7 @@ var basic_food_chain_data = {
             answer : "Bacalao Grouper"
         },
         { 
-            question       : "4. Which animal is greey for groupers?",
+            question       : "4. Which animal is greedy for groupers?",
             images         : [ 
                 "new_images/shark.jpg", 
                 "new_images/blue_footed_booby.jpg", 

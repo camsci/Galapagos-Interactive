@@ -16,7 +16,7 @@ var species_profiles = function() {
         
         // add in an explanation
         dialogue_markup.push( "<div class=\"modal_content\">Click on the photos for more information about each species.<\/div>" );
-        dialogue_markup.push( "<div class=\"modal_content\">Click the \"enlarge\" buttons to enlarge the species photos.<\/div>" );
+        dialogue_markup.push( "<div class=\"modal_content\">Click the photo again to enlarge the species image.<\/div>" );
         
         // add in the continue button
         dialogue_markup.push( "<div class=\"modal_continue_button\" id=\"modal_continue_button\"><div class=\"modal_continue_triangle\"></div></div>");

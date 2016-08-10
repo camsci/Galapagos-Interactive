@@ -1,11 +1,11 @@
 div.splash_screen_images {
     position:                   absolute;
-    top:                        20px;
-    bottom:                     20px;
-    left:                       20px;
-    right:                      20px;
+    top:                        0px;
+    bottom:                     0px;
+    left:                       0px;
+    right:                      0px;
     animation-name:             splash_screen;
-    -webkit-animation-duration: 10s;
+    -webkit-animation-duration: 20s;
     animation-iteration-count:  infinite;
     animation-timing-function:  linear;
     background-image:           url('new_images/splash_screen/shark.jpg');
@@ -21,34 +21,37 @@ div.splash_screen_images {
 }
 
 div.modal_continue_button {
-    bottom:        50px; 
+    bottom:        150px; 
     right:         50px; 
-    height:        100px; 
-    width:         100px; 
-    border-radius: 50px;
+    height:        200px; 
+    width:         200px; 
+    border-radius: 100px;
 }
 
 div.modal_continue_triangle {
-    left:          26px; 
-    border-top:    36px solid transparent; 
-    border-left:   64px solid #FFFFFF; 
-    border-bottom: 36px solid transparent;
+    left:          65px;
+    top:           27px; 
+    border-top:    76px solid transparent; 
+    border-left:   104px solid #FFFFFF; 
+    border-bottom: 76px solid transparent;
 }
 
 div.question_text {
-    position:    absolute; 
+    position:    absolute;
+    font-weight: bold;
+    text-shadow: 10%; 
     font-size:   200px;
-    font-family: Montserrat-Regular;
-    bottom:      50px;
+    font-family: Arial;
+    bottom:      400px;
     left:        20px;
     right:       20px;
     text-align:  center;
-    color:       RGB( 147, 35, 132 );
+    color:       RGB( 255, 255, 255 );
 }
 
 div.question_text:after {
     animation-name:             splash_screen_question_text;
-    -webkit-animation-duration: 10s;
+    -webkit-animation-duration: 20s;
     animation-iteration-count:  infinite;
     animation-timing-function:  linear; 
     content:                    "Who";
@@ -60,5 +63,5 @@ div.question_text:after {
     33% { content: "Who?"; }
     50% { content: "Who"; }
     66% { content: "Eats"; }
-    82% { content: "Who"; }
+    82% { content: "Who?"; }
 }
