@@ -1,6 +1,6 @@
 // declare our global variable which will contain the public API methods for this file
 // ensure that it matches our file name for ease!
-var add_event_listeners = (function() {
+var add_event_listeners = (function create_api() {
     
     "use strict";
     
