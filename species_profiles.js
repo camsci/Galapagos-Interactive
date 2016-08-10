@@ -1,7 +1,11 @@
 // declare our global variable which will contain the public API methods for this file
 // ensure that it matches our file name for ease!
-var species_profiles = function() {
+var species_profiles = ( function create_api() {
     
+    "use strict";
+    
+    /*global add_event_listeners,index_data,modal_dialogue,top,game_logic*/
+   
     // ----------
     // display the intro message ( called from the body onload event )
     //     @onload_event is the browser load event 
@@ -35,7 +39,7 @@ var species_profiles = function() {
     function detail_image_clicked( mouse_event ) {
         
         // flip the class names 
-        if ( mouse_event.srcElement.className == "modal_image" ) {
+        if ( mouse_event.srcElement.className === "modal_image" ) {
             mouse_event.srcElement.parentNode.className = "modal_full_screen_image_container";
             mouse_event.srcElement.className = "modal_full_screen_image";
         } else {
@@ -104,7 +108,7 @@ var species_profiles = function() {
     //     @onload_event is the browser load event 
     // ----------
     function attach_click_events( body_onload_event ) {
-
+                
         // Attach event listeners to our images
         add_event_listeners.to_class_name( "image_container", "click", species_profiles.grid_image_clicked );
 
@@ -122,4 +126,4 @@ var species_profiles = function() {
         display_intro_message : display_intro_message
     };
     
-}();
+}() );

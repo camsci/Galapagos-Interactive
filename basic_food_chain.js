@@ -2,6 +2,10 @@
 // ensure that it matches our file name for ease!
 var basic_food_chain = (function create_api() {
     
+    "use strict";
+    
+    /*global add_event_listeners,index_data,modal_dialogue,top,game_logic*/
+    
     // ----------
     // show the next question
     // ----------
@@ -22,6 +26,9 @@ var basic_food_chain = (function create_api() {
             
             // set the name of the animal
             document.getElementById( "image_" + i ).setAttribute( "data-animal-name", animals[i] );
+            
+            // set the visual name of the animal
+            document.getElementById( "label_" + i ).innerHTML = animals[i];
         }
     }
 
@@ -42,6 +49,13 @@ var basic_food_chain = (function create_api() {
             
             // remove the ID so we don't break things!
             image_to_display.setAttribute( "id", null );
+            
+            // remove the style class we use
+            image_to_display.classList.remove( "image" );
+            
+            // make the images just fill their containing element
+            image_to_display.style.height = "100%";
+            image_to_display.style.width = "100%";
             
             // get the current question index
             var current_question_index = top.game_logic.get_current_question_index();
@@ -104,4 +118,4 @@ var basic_food_chain = (function create_api() {
         start_game : start_game
     };
     
-})();
+}());

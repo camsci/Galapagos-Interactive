@@ -2,6 +2,10 @@
 // ensure that it matches our file name for ease!
 var game_logic = ( function create_api() {
 
+    "use strict";
+
+    /*global top,add_event_listeners,basic_food_chain_data,modal_dialogue*/
+
     // store which food chains they have completed
     var food_chains_completed = {
         sea  : false,
@@ -129,7 +133,7 @@ var game_logic = ( function create_api() {
     function validate_answer( answer ) {
         
         // if this is the right answer
-        if ( basic_food_chain_data[ current_food_chain ][ current_question_index ].answer == answer ) {
+        if ( basic_food_chain_data[ current_food_chain ][ current_question_index ].answer === answer ) {
                         
             // return that we got this right!
             return true;
@@ -146,7 +150,7 @@ var game_logic = ( function create_api() {
         
         // work out the next habitat
         var next_habitat = "land";
-        if ( current_food_chain == "land" ) {
+        if ( current_food_chain === "land" ) {
             next_habitat = "sea";
         }
         
@@ -171,7 +175,7 @@ var game_logic = ( function create_api() {
     function finished_basic_food_chain() {
         
         // if they have only done one of the food chains, make them do the other!
-        if ( ( current_food_chain == "land" && food_chains_completed.sea === false ) || ( current_food_chain == "sea" && food_chains_completed.land === false ) ) {
+        if ( ( current_food_chain === "land" && food_chains_completed.sea === false ) || ( current_food_chain === "sea" && food_chains_completed.land === false ) ) {
             
             // store that we've run this food chain
             food_chains_completed[ current_food_chain ] = true;
@@ -290,4 +294,4 @@ var game_logic = ( function create_api() {
         show_incorrect_answer           : show_incorrect_answer
     };
     
-})();
+}());

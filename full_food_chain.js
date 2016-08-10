@@ -2,6 +2,10 @@
 // ensure that it matches our file name for ease!
 var full_food_chain = (function create_api() {
 
+    "use strict";
+
+    /*global top,game_logic,add_event_listeners,modal_dialogue*/
+
     // build up the number of correct answers
     var correct_answers = 0;
 
@@ -79,7 +83,7 @@ var full_food_chain = (function create_api() {
             // increase the answer count
             correct_answers = correct_answers + 1;
             
-            if ( correct_answers == 9 ) {
+            if ( correct_answers === 9 ) {
                 
                 // declare an array to hold our markup
                 var dialogue_markup = [];
@@ -160,7 +164,7 @@ var full_food_chain = (function create_api() {
             return;
         }
         
-        if ( dragged_level == dropped_level ) {
+        if ( dragged_level === dropped_level ) {
             // display the correct answer animation!
             top.game_logic.show_correct_answer();
             
@@ -187,7 +191,7 @@ var full_food_chain = (function create_api() {
             // increase the answer count
             correct_answers = correct_answers + 1;
             
-            if ( correct_answers == 9 ) {
+            if ( correct_answers === 9 ) {
                 
                 // declare an array to hold our markup
                 var dialogue_markup = [];
@@ -267,4 +271,4 @@ var full_food_chain = (function create_api() {
         start_game : start_game
     };
     
-})();
+}());

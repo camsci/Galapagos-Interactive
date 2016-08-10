@@ -2,6 +2,8 @@
 // ensure that it matches our file name for ease!
 var modal_dialogue = (function create_api() {
 
+    "use strict";
+
     // ----------
     // remove our modal dialogue
     // ----------
@@ -58,4 +60,4 @@ var modal_dialogue = (function create_api() {
         remove  : remove
     };
     
-})();
+}());

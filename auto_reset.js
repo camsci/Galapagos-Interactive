@@ -2,6 +2,10 @@
 // ensure that it matches our file name for ease!
 var auto_reset = (function create_api() {
     
+    "use strict";
+    
+    /*global modal_dialogue*/
+    
     // keep a pointer to the auto reset timeout
     var auto_reset_timeout;
     
@@ -15,6 +19,16 @@ var auto_reset = (function create_api() {
     // we want our timeout to be 10 seconds
     // timeouts are in miliseconds though, so we times by 1000
     var we_are_still_here_timeout_duration = 10 * 1000;
+
+    // ----------
+    // start our auto reset off ( called from the body onload event )
+    //     @body_load_event - browser load event
+    // ----------
+    function start_timeout() {
+        // start the auto reset process
+        /*global check_they_are_still_here*/
+        auto_reset_timeout = setTimeout( check_they_are_still_here, auto_reset_timeout_duration );
+    }
     
     // ----------
     // they have said that they are still there, so reset everything
@@ -49,24 +63,15 @@ var auto_reset = (function create_api() {
         dialogue_markup.push( "<div class=\"modal_continue_button\" id=\"modal_continue_button\"><div class=\"modal_continue_triangle\"></div></div>");
         
         // show the modal display, and say that we want it to be medium in size
-        modal_dialogue.display( dialogue_markup.join( "" ), "medium" );
+        // TODO: modal_dialogue.display( dialogue_markup.join( "" ), "medium" );
 
         // add a listener to the continue button, to close the dialogue
-        add_event_listeners.to_element( document.getElementById( "modal_continue_button" ), "click", we_are_still_here );
+        // TODO: add_event_listeners.to_element( document.getElementById( "modal_continue_button" ), "click", we_are_still_here );
         
         // set up a timeout if they don't click on the prompt
-        we_are_still_here_timeout = setTimeout( game_logic.reset_game_immediately, we_are_still_here_timeout_duration );
+        // TODO: we_are_still_here_timeout = setTimeout( game_logic.reset_game_immediately, we_are_still_here_timeout_duration );
     }
-    
-    // ----------
-    // start our auto reset off ( called from the body onload event )
-    //     @body_load_event - browser load event
-    // ----------
-    function start_timeout() {
-        // start the auto reset process
-        auto_reset_timeout = setTimeout( check_they_are_still_here, auto_reset_timeout_duration );
-    }
-    
+        
     // ----------
     // they have performed an action in the game
     // we cound that as being here!
@@ -79,10 +84,10 @@ var auto_reset = (function create_api() {
         }
         
         // clear the previous timeout
-        clearTimeout( auto_reset_timeout );
+        // TODO: clearTimeout( auto_reset_timeout );
         
         // start a new timeout
-        start_timeout();
+        // TODO: start_timeout();
     }
     
     // return our API
@@ -91,4 +96,4 @@ var auto_reset = (function create_api() {
         reset_timeout : reset_timeout
     };
     
-})();
+}());

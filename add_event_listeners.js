@@ -1,6 +1,8 @@
 // declare our global variable which will contain the public API methods for this file
 // ensure that it matches our file name for ease!
-var add_event_listeners = function() {
+var add_event_listeners = (function() {
+    
+    "use strict";
     
     // ----------
     // a function to add event listeners to all elements with a given class name
@@ -8,7 +10,7 @@ var add_event_listeners = function() {
     //     @event_type:         The type of DOM event that we are going to listen for
     //     @function_reference: The function reference we should call when the event happens
     // ----------
-    var to_class_name = function( class_name_string, event_type, function_reference ) {
+    function to_class_name( class_name_string, event_type, function_reference ) {
         
         // grab all of the elements that match this class name
         var all_elements = document.getElementsByClassName( class_name_string );
@@ -27,7 +29,7 @@ var add_event_listeners = function() {
     //     @event_type:         The type of DOM event that we are going to listen for
     //     @function_reference: The function reference we should call when the event happens
     // ----------
-    var to_element = function( element, event_type, function_reference ) {
+    function to_element( element, event_type, function_reference ) {
         // add the event listener
         element.addEventListener( event_type, function_reference, false );
     }
@@ -37,5 +39,5 @@ var add_event_listeners = function() {
     return {
         to_class_name : to_class_name,
         to_element    : to_element
-    }
-}();
+    };
+}());
