@@ -72,12 +72,13 @@ div.coloured_container {
 }
 
 div.full_food_chain {
-    height:            990px;
-    width:             1860px;
-    position:          absolute;    
-    background-image:  url( "new_images/background_image.jpg" );
-    background-size:   100% 100%;
-    background-repeat: no-repeat;
+    height:                1050px;
+    width:                 1860px;
+    position:              absolute;
+    background-image:      url("new_images/background_image.jpg");
+    background-size:       100% 100%;
+    background-repeat:     no-repeat;
+    background-position-y: -110px;
 }
 
 div.image_container { 
@@ -92,6 +93,14 @@ div.image_container {
     overflow:         hidden;
 }
 
+/* We use an even smaller version of the image container on the name food chain levels page */
+div.image_container.small {
+    width:    260px;
+    height:   160px;
+    position: absolute;
+    margin:   0px;
+}
+
 /* Remove the right margin when we have an arrow there */
 div.image_container.right {
 	margin-right: 0px;
@@ -104,13 +113,23 @@ img.image {
     margin-top:    10px;
 }
 
+img.image.small {
+    height: 112px;
+    width:  240px;
+}
+
 div.image_label {
     height:      30px;
     font-size:   24px;
     font-family: arial;
-    overflow:    auto;
+    overflow:    hidden;
     color:       white;
     margin-top:  4px;
+}
+
+div.image_label.small {
+    font-size: 20px;
+    height:    20px;
 }
 
 div.habitat_choice_container {
@@ -149,19 +168,6 @@ div.food_chain_image_container {
 div.food_chain_image_container.medium {
     height: 160px;
     width:  240px;
-}
-
-/* We use an even smaller version of the image container on the name food chain levels page */
-div.food_chain_image_container.small {
-    height:      85px;
-    width:       150px;
-    position:    absolute;
-    margin:      0px;
-    z-index:     3;
-    border:      2px solid #FFFFFF;
-    font-family: Arial;
-    font-size:   28px;
-    color:       white;
 }
 
 div.draggable_image_answer {
