@@ -61,35 +61,44 @@ var full_food_chain = (function create_api() {
             drag_event.changedTouches[0].pageY
         );
         
+        // if this is the text from our answer
+        if ( dropped_target_element.classList.contains( "droppable_answer_text" ) ) {
+            // jump up and grab the parent element instead
+            dropped_target_element = dropped_target_element.parentNode;
+        }
+        
         // get the level of the element they have dropped it onto
         var dropped_level = dropped_target_element.getAttribute( "data-animal-name" );
         
         // if it isnt one of our droppable answers
         if ( dropped_level === null ) { 
-            drag_event.srcElement.parentNode.style.left = "250px";
+            drag_event.srcElement.parentNode.style.left = "";
+            drag_event.srcElement.parentNode.style.top = "";
+            drag_event.srcElement.parentNode.style.bottom = "";
             return;
         }
         
+        // if we have got the right level
         if ( dragged_level === dropped_level ) {
-            // display the correct answer animation!
-            top.game_logic.show_correct_answer();
-            
-            // grab a pointer to the answer
-            var answer_element = drag_event.srcElement;
-            
+                        
+            // grab a pointer to the answer image
+            var animal_image = drag_event.srcElement;
+
+            // then grab the animal label from underneath it
+            var animal_label = animal_image.nextElementSibling;
+
             // remove the parent element from the DOM
-            answer_element.parentNode.remove();
+            animal_image.parentNode.remove();
             
             // add the level into the correct place ( removing the text from the element first )
             dropped_target_element.innerHTML = "";
-            dropped_target_element.appendChild( answer_element );
+            dropped_target_element.appendChild( animal_image );
+            dropped_target_element.appendChild( animal_label );
                         
-            // remove the position style
-            answer_element.style.position = "static";
-
             // increase the answer count
             correct_answers = correct_answers + 1;
             
+            // if we have answered all of the questions correctly, finish the game
             if ( correct_answers === 9 ) {
                 
                 // declare an array to hold our markup
@@ -109,7 +118,13 @@ var full_food_chain = (function create_api() {
 
                 // add a listener to the continue button, to close the dialogue
                 add_event_listeners.to_element( document.getElementById( "modal_continue_button" ), "click", top.game_logic.reset_game_immediately );
+            
+            // otherwise we should show the correct answer animation
+            } else {
+                // display the correct answer animation!
+                top.game_logic.show_correct_answer();
             }
+            
         } else {
             // show the incorrect answer animation
             top.game_logic.show_incorrect_answer();

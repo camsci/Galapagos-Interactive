@@ -58,19 +58,37 @@
         <div class="full_food_chain_container">
 
             <!-- first lay out our empty droppable elements -->
-            <div class="image_container small droppable_answer apex_predator land column_three" data-animal-name="hawk" >Apex Predator</div>
-            <div class="image_container small droppable_answer apex_predator sea  column_three" data-animal-name="shark">Apex Predator</div>
+            <div class="image_container small droppable_answer apex_predator land column_three" data-animal-name="hawk">
+                <div class="droppable_answer_text" data-animal-name="hawk">Apex Predator</div>
+            </div>
+            <div class="image_container small droppable_answer apex_predator sea  column_three" data-animal-name="shark">
+                <div class="droppable_answer_text" data-animal-name="shark">Apex Predator</div>
+            </div>
 
-            <div class="image_container small droppable_answer secondary_consumer land column_two" data-animal-name="banded_snake"   >Secondary Consumer</div>
-            <div class="image_container small droppable_answer secondary_consumer sea  column_two" data-animal-name="bacalao_grouper">Secondary Consumer</div>
+            <div class="image_container small droppable_answer secondary_consumer land column_two" data-animal-name="banded_snake">
+                <div class="droppable_answer_text" data-animal-name="banded_snake">Secondary Consumer</div>
+            </div>
+            <div class="image_container small droppable_answer secondary_consumer sea  column_two" data-animal-name="bacalao_grouper">
+                <div class="droppable_answer_text" data-animal-name="bacalao_grouper">Secondary Consumer</div>
+            </div>
 
-            <div class="image_container small droppable_answer primary_consumer land column_two"  data-animal-name="marine_iguana">Primary Consumer</div>
-            <div class="image_container small droppable_answer primary_consumer sea  column_four" data-animal-name="flying_fish"  >Primary Consumer</div>
+            <div class="image_container small droppable_answer primary_consumer land column_two" data-animal-name="marine_iguana">
+                <div class="droppable_answer_text" data-animal-name="marine_iguana">Primary Consumer</div>
+            </div>
+            <div class="image_container small droppable_answer primary_consumer sea  column_four" data-animal-name="flying_fish">
+                <div class="droppable_answer_text" data-animal-name="flying_fish">Primary Consumer</div>
+            </div>
 
-            <div class="image_container small droppable_answer producer land column_one" data-animal-name="prickly_cactus"   >Producer</div>
-            <div class="image_container small droppable_answer producer sea  column_one" data-animal-name="green_sea_lettuce">Producer</div>
+            <div class="image_container small droppable_answer producer land column_one" data-animal-name="prickly_cactus">
+                <div class="droppable_answer_text" data-animal-name="prickly_cactus">Producer</div>
+            </div>
+            <div class="image_container small droppable_answer producer sea  column_one" data-animal-name="green_sea_lettuce">
+                <div class="droppable_answer_text" data-animal-name="green_sea_lettuce">Producer</div>
+            </div>
             
-            <div class="image_container small droppable_answer tertiary_consumer land column_four" data-animal-name="vampire_finch">Tertiary Consumer</div>
+            <div class="image_container small droppable_answer tertiary_consumer land column_four" data-animal-name="vampire_finch">
+                <div class="droppable_answer_text" data-animal-name="vampire_finch">Tertiary Consumer</div>
+            </div>
             
             <!-- then lay out the ones that are already answered -->
             <div class="image_container small primary_consumer iguana column_one">
@@ -95,9 +113,8 @@
             <div class="chain_arrow bottom_right land_primary_consumer_to_land_secondary_consumer"></div>
             <div class="chain_arrow top_left     land_primary_consumer_to_land_apex_predator"></div>
             <div class="chain_arrow top_left     land_seconday_consumer_to_land_apex_predator"></div>
-            <div class="chain_arrow top_left     land_seconday_consumer_to_land_apex_predator"></div>
             <div class="chain_arrow top_right    land_tertiary_consumer_to_land_apex_predator"></div>
-            <div class="chain_arrow straight     land_tertiary_consumer_to_land_secondary_consumer"></div>
+            <div class="chain_arrow bottom_left  land_tertiary_consumer_to_land_secondary_consumer"></div>
             <div class="chain_arrow straight     land_seconday_consumer_to_land_tertiary_consumer"></div>
             <div class="chain_arrow bottom_right sea_primary_consumer_to_land_apex_predator"></div>
             <div class="chain_arrow straight     sea_producer_to_sea_primary_consumer"></div>
@@ -108,7 +125,6 @@
             <div class="chain_arrow bottom_right sea_primary_consumer_to_sea_apex_predator"></div>
             <div class="chain_arrow straight     sea_primary_consumer_to_land_secondary_consumer"></div>
 
-            
         </div>
     </div>
 </div>

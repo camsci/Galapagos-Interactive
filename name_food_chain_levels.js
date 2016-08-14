@@ -57,11 +57,9 @@ var name_food_chain_levels = (function create_api() {
             return;
         }
         
+        // if they have picked the right level
         if ( dragged_level === dropped_level ) {
-            
-            // display the correct answer animation!
-            top.game_logic.show_correct_answer();
-            
+                        
             // grab a pointer to the answer
             var answer_element = drag_event.srcElement;
             
@@ -81,7 +79,12 @@ var name_food_chain_levels = (function create_api() {
             if ( levels_completed.length === 4 ) {
                 // go onto the final part of the game
                 top.game_logic.finished_name_food_chain_levels();
+            // otherwise lets shwo the correct answer animation
+            } else {
+                // display the correct answer animation!
+                top.game_logic.show_correct_answer();
             }
+            
         } else {
             // show the incorrect answer animation
             top.game_logic.show_incorrect_answer();
