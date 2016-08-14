@@ -68,12 +68,15 @@ div.coloured_container {
 
 div.full_food_chain {
     height:                1050px;
-    width:                 1860px;
+    width:                 1900px;
     position:              absolute;
     background-image:      url("new_images/background_image.jpg");
     background-size:       100% 100%;
     background-repeat:     no-repeat;
     background-position-y: -110px;
+    text-align:            center;
+    top:                   0px;
+    left:                  0px;
 }
 
 div.image_container { 
@@ -199,7 +202,7 @@ div.draggable_answer.dropped_answer {
 
 div.full_food_chain_container {
     position: absolute;
-    top:      0px;
+    top:      20px;
     bottom:   0px;
     right:    0px;
     left:     40%;
@@ -215,7 +218,7 @@ div.apex_predator.land {
 }
 
 div.apex_predator.sea {
-    bottom: 193px;
+    bottom: 140px;
 }
 
 div.producer {
@@ -237,7 +240,7 @@ div.primary_consumer {
 }
 
 div.primary_consumer.sea {
-    bottom: 312px;
+    bottom: 292px;
 }
 
 div.primary_consumer.land {
@@ -275,11 +278,11 @@ div.column_two {
 }
 
 div.column_three { 
-    right: 291px;
+    right: 315px;
 }
 
 div.column_four {
-    right: 10px;
+    right: 34px;
 }
 
 div.blue_footed_booby {
