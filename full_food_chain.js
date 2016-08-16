@@ -54,13 +54,21 @@ var full_food_chain = (function create_api() {
         
         // hide the element ( this allows us to grab the element from underneath, very important! )
         drag_event.srcElement.parentNode.style.left = "-500px";
-        
+
         // work out the element they;ve just dropped it onto 
         var dropped_target_element = document.elementFromPoint(
             drag_event.changedTouches[0].pageX,
             drag_event.changedTouches[0].pageY
         );
         
+		// if they have dropped off screen by sta
+		if ( dropped_target_element === null ) {
+            drag_event.srcElement.parentNode.style.left = "";
+            drag_event.srcElement.parentNode.style.top = "";
+            drag_event.srcElement.parentNode.style.bottom = "";
+			return;
+		}
+		
         // if this is the text from our answer
         if ( dropped_target_element.classList.contains( "droppable_answer_text" ) ) {
             // jump up and grab the parent element instead
@@ -130,7 +138,9 @@ var full_food_chain = (function create_api() {
             top.game_logic.show_incorrect_answer();
             
             // Put the element back
-            drag_event.srcElement.parentNode.style.left = "250px";
+            drag_event.srcElement.parentNode.style.left = "";
+            drag_event.srcElement.parentNode.style.top = "";
+            drag_event.srcElement.parentNode.style.bottom = "";
         }
     }
     

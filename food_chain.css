@@ -68,7 +68,7 @@ div.coloured_container {
 
 div.full_food_chain {
     height:                1050px;
-    width:                 1900px;
+    width:                 1920px;
     position:              absolute;
     background-image:      url("new_images/background_image.jpg");
     background-size:       100% 100%;
@@ -278,11 +278,11 @@ div.column_two {
 }
 
 div.column_three { 
-    right: 315px;
+    right: 327px;
 }
 
 div.column_four {
-    right: 34px;
+    right: 46px;
 }
 
 div.blue_footed_booby {
