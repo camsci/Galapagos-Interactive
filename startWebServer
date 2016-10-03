@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /home/csc/Galapagos-Interactive
+sudo python -m SimpleHTTPServer 80&

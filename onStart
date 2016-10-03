@@ -1,0 +1,13 @@
+#!/bin/bash
+
+exec 201> /tmp/lock.$(basename $0).file
+if ! flock -n 201  ; then
+  echo "another instance of $0 is running";
+  exit 1
+fi
+
+sudo /home/csc/startWebServer
+startx -nocursor
+
+exec 201>&- 
+rm -rf  /tmp/lock.$(basename $0).file
